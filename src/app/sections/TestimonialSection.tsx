@@ -82,7 +82,7 @@ export default function TestimonialSection() {
               >
                 {/* CARD */}
                 <div
-                  className="rounded-3xl p-8 w-[250px] shadow-lg text-center"
+                  className="rounded-3xl p-8 w-[280px] shadow-lg text-center"
                   style={{
                     backgroundColor: item.bg,
                     color: item.text,
