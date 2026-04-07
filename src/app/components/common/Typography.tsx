@@ -39,9 +39,9 @@ const variantColors: Record<TypographyVariant, string> = {
 };
 
 const variantFonts: Record<TypographyVariant, "poppins" | "berkshire"> = {
-  h1: "berkshire",
-  h2: "berkshire",
-  h3: "berkshire",
+  h1: "poppins",
+  h2: "poppins",
+  h3: "poppins",
   lead1: "poppins",
   lead2: "poppins",
   label: "poppins",
@@ -50,7 +50,7 @@ const variantFonts: Record<TypographyVariant, "poppins" | "berkshire"> = {
 
 const fontClasses: Record<string, string> = {
   poppins: "font-poppins",
-  berkshire: "font-berkshire",
+  berkshire: "font-poppins",
 };
 
 const Typography: React.FC<TypographyProps> = ({
