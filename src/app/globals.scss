@@ -27,3 +27,8 @@ body {
     0 0,
     clamp(15px, 1.5vw, 30px) clamp(15px, 1.5vw, 30px);
 }
+
+.t-300ms,
+.t-300ms * {
+  transition: all 0.3s;
+}
