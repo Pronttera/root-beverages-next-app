@@ -40,7 +40,10 @@ const AboutSection = () => {
   ];
 
   return (
-    <Section id="about-roots" className="py-20 md:py-32 min-h-screen">
+    <Section
+      id="about-roots"
+      className="dotted-bg bg-tomato py-20 md:py-32 min-h-screen"
+    >
       <Container>
         <div className="space-y-20 md:space-y-32 items-center">
           {list.map((item, index) => (

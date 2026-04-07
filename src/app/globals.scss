@@ -17,3 +17,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: var(--font-poppins);
 }
+
+.dotted-bg {
+  background-image:
+    radial-gradient(rgba(0, 0, 0, 0.05) 10%, transparent 11%),
+    radial-gradient(rgba(0, 0, 0, 0.05) 10%, transparent 11%);
+  background-size: clamp(30px, 3vw, 60px) clamp(30px, 3vw, 60px);
+  background-position:
+    0 0,
+    clamp(15px, 1.5vw, 30px) clamp(15px, 1.5vw, 30px);
+}
