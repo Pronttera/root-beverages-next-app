@@ -5,6 +5,8 @@
 @theme {
   --font-poppins: var(--font-poppins);
   --font-berkshire: var(--font-berkshire);
+  --color-green: #49cb49;
+  --color-tomato: #eb373e;
 }
 
 body {
@@ -14,10 +16,4 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: var(--font-poppins);
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
