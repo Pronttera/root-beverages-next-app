@@ -63,7 +63,7 @@ export default function TestimonialSection() {
           className="flex gap-10 items-center"
           animate={{ x: ["0%", "-50%"] }}
           transition={{
-            duration: 20,
+            duration: 10,
             repeat: Infinity,
             ease: "linear",
           }}
