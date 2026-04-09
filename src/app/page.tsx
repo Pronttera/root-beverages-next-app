@@ -2,6 +2,7 @@ import AppBar from "./components/layout/AppBar";
 import Footer from "./components/layout/Footer";
 
 import AboutSection from "./sections/AboutSection";
+import CollaborationSection from "./sections/CollaborationSection";
 import FlavoursSection from "./sections/FlavoursSection";
 import TestimonialSection from "./sections/TestimonialSection";
 
@@ -14,7 +15,8 @@ export default function Home() {
       <AboutSection />
       <FlavoursSection />
       <TestimonialSection/>
-      {/* <Footer /> */}
+      <CollaborationSection/>
+      <Footer />
     </>
   );
 }

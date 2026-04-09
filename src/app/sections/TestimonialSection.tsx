@@ -99,7 +99,7 @@ export default function TestimonialSection() {
                 {/* SVG */}
                 <img
                   src={SHAPES[i % SHAPES.length]}
-                  className="w-28 h-28 md:w-60 md:h-60 mt-4"
+                  className="w-38 h-38 md:w-60 md:h-60 mt-4"
                 />
               </div>
             );

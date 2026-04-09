@@ -1,9 +1,9 @@
-"use client";
+ "use client";
 import React, { useState, useEffect } from "react";
-import Section from "../components/Common/Section";
-import Container from "../components/Common/Container";
-import Typography from "../components/Common/Typography";
-import Button from "../components/Common/Button";
+import Section from "../components/common/Section";
+import Container from "../components/common/Container";
+import Typography from "../components/common/Typography";
+import Button from "../components/common/Button";
 
 interface FlavorCard {
   id: number;
@@ -120,16 +120,17 @@ export default function FlavoursSection() {
       {/* ── Section body ── */}
       <Container className="pt-10 pb-20 md:pt-20 md:pb-32 space-y-12 md:space-y-16">
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-start gap-10">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:gap-10 px-4 md:px-0">
           <div className="max-w-3xl">
-            <span className="inline-block bg-white text-black text-md px-4 py-1 rounded-full mb-6">
+            <span className="inline-block bg-white text-black text-md px-4 py-1 rounded-full mb-4 md:mb-6">
               Our Sodas
             </span>
             <h2
               className="text-white uppercase leading-[0.9]"
               style={{
-                fontSize: "clamp(48px, 8vw, 110px)",
-                fontFamily: "Anton, Impact, sans-serif",
+                fontSize: "clamp(42px, 11vw, 110px)",
+                fontWeight: 600,
+                // fontFamily: "Anton, Impact, sans-serif",
                 letterSpacing: "-2px",
               }}
             >
@@ -138,8 +139,8 @@ export default function FlavoursSection() {
               Clean Hits.
             </h2>
           </div>
-          <div className="max-w-md pt-6 md:pt-34">
-            <p className="text-white/90 text-[18px] leading-relaxed">
+          <div className="max-w-md md:pt-34">
+            <p className="text-white/90 text-base md:text-[18px] leading-relaxed">
               Whether you're in the mood for something fruity, fizzy, or
               fabulously refreshing, our collection of beverages and juices has
               something for every taste.
@@ -149,7 +150,7 @@ export default function FlavoursSection() {
 
         {/* ── Carousel ── */}
         <div className="relative mx-auto w-full">
-          <div className="overflow-hidden px-2 md:px-10">
+          <div className="overflow-hidden px-4 md:px-10">
             <div
               className="flex gap-4 md:gap-6 transition-transform duration-[420ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
               style={{
@@ -162,7 +163,7 @@ export default function FlavoursSection() {
                   className="flex-shrink-0 rounded-3xl overflow-hidden flex flex-col shadow-lg"
                   style={{
                     width: isMobile
-                      ? "calc(100% - 8px)"
+                      ? "100%"
                       : `calc(100% / ${VISIBLE} - 16px)`,
                     backgroundColor: card.bgColor,
                     minHeight: isMobile ? "460px" : "560px",
@@ -174,7 +175,7 @@ export default function FlavoursSection() {
                       src={card.image}
                       alt={card.name}
                       className="w-auto h-full object-contain scale-110 drop-shadow-2xl"
-                      style={{ maxHeight: isMobile ? "320px" : "580px" }}
+                      style={{ maxHeight: isMobile ? "260px" : "580px" }}
                     />
                   </div>
 
@@ -325,7 +326,7 @@ export default function FlavoursSection() {
         </div>
 
         {/* ── Order Now CTA ── */}
-        <div className="flex justify-center pt-2">
+        <div className="flex justify-center pt-2 px-4 md:px-0">
           <Button
             variant="secondary"
             size="lg"
