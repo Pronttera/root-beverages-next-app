@@ -1,6 +1,7 @@
  "use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -11,8 +12,12 @@ export default function Footer() {
         <div>
           <h3 className="font-black text-2xl mb-4">Company</h3>
           <ul className="space-y-3 text-gray-800 text-lg">
-            <li className="hover:text-red-500 cursor-pointer">Privacy Policy</li>
-            <li className="hover:text-red-500 cursor-pointer">Terms of Service</li>
+            <li className="hover:text-red-500 cursor-pointer">
+              <Link href="/privacy-policy" className="hover:text-red-500">Privacy Policy</Link>
+            </li>
+            <li className="hover:text-red-500 cursor-pointer">
+              <Link href="/terms-of-service" className="hover:text-red-500">Terms of Service</Link>
+            </li>
           </ul>
         </div>
         <div>
@@ -50,8 +55,12 @@ export default function Footer() {
           <div>
             <h3 className="font-black text-xl mb-3">Company</h3>
             <ul className="space-y-2 text-gray-800 text-base">
-              <li className="hover:text-red-500 cursor-pointer">Privacy Policy</li>
-              <li className="hover:text-red-500 cursor-pointer">Terms of Service</li>
+              <li className="hover:text-red-500 cursor-pointer">
+                <Link href="/privacy-policy" className="hover:text-red-500">Privacy Policy</Link>
+              </li>
+              <li className="hover:text-red-500 cursor-pointer">
+                <Link href="/terms-of-service" className="hover:text-red-500">Terms of Service</Link>
+              </li>
             </ul>
           </div>
           <div>

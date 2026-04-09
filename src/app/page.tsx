@@ -1,7 +1,9 @@
 import AppBar from "./components/layout/AppBar";
 import Footer from "./components/layout/Footer";
 
+import HeroSection from "./sections/HeroSection";
 import AboutSection from "./sections/AboutSection";
+// import TestimonialSection from "./sections/TestimonialSection";
 import CollaborationSection from "./sections/CollaborationSection";
 import FlavoursSection from "./sections/FlavoursSection";
 import TestimonialSection from "./sections/TestimonialSection";
@@ -12,9 +14,11 @@ export default function Home() {
     <>
       <AppBar />
 
+      <HeroSection />
       <AboutSection />
+      <TestimonialSection />
       <FlavoursSection />
-      <TestimonialSection/>
+      <TestimonialSection />
       <CollaborationSection/>
       <Footer />
     </>
