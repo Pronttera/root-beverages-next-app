@@ -93,7 +93,7 @@ const AppBar: React.FC<AppBarProps> = ({
           <div className="flex justify-between items-center max-w-7xl mx-auto cursor-pointer">
             {/* Brand Logo */}
             <div
-              className="flex items-center cursor-pointer"
+              className="flex items-center gap-3 cursor-pointer"
               onClick={() => handler("/")}
             >
               <Image
@@ -104,6 +104,9 @@ const AppBar: React.FC<AppBarProps> = ({
                 className="h-8 md:h-19 w-auto object-contain"
                 priority
               />
+              <span className="text-white font-black text-lg md:text-lg leading-tight">
+                Root Beverages
+              </span>
             </div>
 
             {/* Desktop Navigation */}

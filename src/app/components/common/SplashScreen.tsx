@@ -7,7 +7,7 @@ export default function SplashScreen() {
   const [hide, setHide] = useState(false);
 
   useEffect(() => {
-    const gifDuration = 2200;
+    const gifDuration = 1700;
 
     const t = setTimeout(() => {
       setHide(true);
@@ -26,17 +26,17 @@ export default function SplashScreen() {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
         >
-          {/* 🔥 CENTER GROUP */}
+          {/* CENTER GROUP */}
           <div className="relative flex items-center justify-center">
 
-            {/* 🔥 CENTER GIF */}
+            {/*  CENTER GIF */}
             <img
               src="/micha-preloader-gif-500.webp"
               alt="loading"
               className="w-[180px] md:w-[210px] relative z-10"
             />
 
-            {/* 🔥 LEFT LEAF */}
+            {/* LEFT LEAF */}
             <motion.img
               src="/preloader-left.svg"
               alt="left"
@@ -52,7 +52,7 @@ export default function SplashScreen() {
               }}
             />
 
-            {/* 🔥 RIGHT LEAF */}
+            {/*  RIGHT LEAF */}
             <motion.img
               src="/preloader-right.svg"
               alt="right"
