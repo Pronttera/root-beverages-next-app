@@ -38,9 +38,9 @@ export default function Footer() {
             <li className="hover:text-red-500 cursor-pointer">Facebook</li>
           </ul>
         </div>
-        <div className="flex flex-col items-start md:items-center gap-4">
-          <Image src="/R.png" alt="Root Beverages Logo" width={120} height={50} className="object-contain" />
-          <div className="text-right">
+        <div className="flex flex-col items-start md:items-center gap-4 md:-mt-12">
+          <Image src="/root-beverages-logo.png" alt="Root Beverages Logo" width={200} height={80} className="object-contain" />
+          <div className="text-right md:-mt-7">
             <p className="text-black font-black text-2xl rotate-[-5deg] inline-block">SPARKLES OF</p>
             <br />
             <p className="text-black font-black text-4xl rotate-[-3deg] inline-block">GOODNESS</p>
@@ -89,7 +89,7 @@ export default function Footer() {
 
         {/* Row 3 — Logo + tagline centered */}
         <div className="flex flex-col items-center gap-3 pb-10">
-          <Image src="/R.png" alt="Root Beverages Logo" width={100} height={44} className="object-contain" />
+          <Image src="/root-beverages-logo.png" alt="Root Beverages Logo" width={160} height={44} className="object-contain" />
           <div className="text-center">
             <p className="text-black font-black text-xl rotate-[-5deg] inline-block">SPARKLES OF</p>
             <br />

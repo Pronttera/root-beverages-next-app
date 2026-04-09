@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, ChevronLeft } from "lucide-react";
 import { useRouter, usePathname } from "next/navigation";
+import Image from "next/image";
 
 interface NavLink {
   label: string;
@@ -91,15 +92,18 @@ const AppBar: React.FC<AppBarProps> = ({
         <nav className="px-4 py-4 md:px-8">
           <div className="flex justify-between items-center max-w-7xl mx-auto cursor-pointer">
             {/* Brand Logo */}
-            <div className="flex items-center" onClick={() => handler("/")}>
-              <img
-                src={brandImageSrc}
-                alt={brandImageAlt}
-                className="h-8 md:h-14 w-auto"
+            <div
+              className="flex items-center cursor-pointer"
+              onClick={() => handler("/")}
+            >
+              <Image
+                src="/root-beverages-logo.png"
+                alt="Root Beverages"
+                width={160}
+                height={60}
+                className="h-8 md:h-19 w-auto object-contain"
+                priority
               />
-              <span className="pt-1 ml-1 text-md md:text-2xl font-bold text-white">
-                {brandText}
-              </span>
             </div>
 
             {/* Desktop Navigation */}

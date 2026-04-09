@@ -32,3 +32,6 @@ body {
 .t-300ms * {
   transition: all 0.3s;
 }
+.dotted-bg {
+  will-change: mask-image;
+}

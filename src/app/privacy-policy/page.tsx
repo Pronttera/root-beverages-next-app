@@ -14,7 +14,7 @@ export default function PrivacyPolicy() {
           {/* Hero */}
           <div className="text-center mb-12">
             <Typography
-              variant="h1"
+              variant="h2"
               className="font-black inline-block"
               style={{
                 fontSize: "clamp(48px, 8vw, 100px)",
@@ -27,8 +27,8 @@ export default function PrivacyPolicy() {
             </Typography>
           </div>
 
-          <Typography variant="label" className="!text-gray-400 block mb-8">
-            Last updated: 13/10/2025
+          <Typography variant="label" className="!text-gray-400 block mb-2 md:-mt-9">
+            Last updated: 09/04/2026
           </Typography>
 
           <Typography variant="body">
