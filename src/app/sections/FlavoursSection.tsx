@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Section from "../components/common/Section";
 import Container from "../components/common/Container";
-import Typography from "../components/common/Typography";
+import Typography from "../components/Common/Typography";
 import Button from "../components/common/Button";
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";

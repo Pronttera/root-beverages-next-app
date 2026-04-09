@@ -25,7 +25,7 @@ const AppBar: React.FC<AppBarProps> = ({
     { label: "About Roots", href: "#about-roots" },
     { label: "Our Flavours", href: "#our-flavours" },
     { label: "Why Us", href: "#why-us" },
-    { label: "Let's Colloborate", href: "#lets-colloborate" },
+    { label: "Let's Collaborate", href: "#lets-collaborate" },
   ],
 }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
