@@ -1,4 +1,4 @@
-  "use client";
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -10,25 +10,29 @@ const TESTIMONIALS = [
     text: "#fff",
   },
   {
-    quote: "Tastes amazing and my gut is basically doing backflips. Root is a game-changer!",
+    quote:
+      "Tastes amazing and my gut is basically doing backflips. Root is a game-changer!",
     author: "Ravi Malhotra",
     bg: "#F472B6",
     text: "#fff",
   },
   {
-    quote: "I didn't expect my stomach to smile, but here we are. Root is my new happy place in a bottle.",
+    quote:
+      "I didn't expect my stomach to smile, but here we are. Root is my new happy place in a bottle.",
     author: "Tina Lawrence",
     bg: "#2E8B57",
     text: "#fff",
   },
   {
-    quote: "My digestive system says a big thank you. Root is like a party for my gut, and everyone's invited!",
+    quote:
+      "My digestive system says a big thank you. Root is like a party for my gut, and everyone's invited!",
     author: "Liam Sutherland",
     bg: "#8B0000",
     text: "#fff",
   },
   {
-    quote: "Every sip is like a fizzy high five to my gut. Root is the best thing I've done for my digestion in ages!",
+    quote:
+      "Every sip is like a fizzy high five to my gut. Root is the best thing I've done for my digestion in ages!",
     author: "Benita Tan",
     bg: "#DCE34F",
     text: "#1a1a1a",
@@ -45,17 +49,20 @@ const SHAPES = [
 
 const LOOP = [...TESTIMONIALS, ...TESTIMONIALS];
 
-export default function TestimonialSection() {
+export default function TestimonialSection({ hideCard = false }: any) {
   return (
-    <section className="dotted-bg bg-white py-20 md:py-32 min-h-[650px]" id="why-us">
-      
-      
+    <section
+      className={`dotted-bg py-20 md:py-32 min-h-[650px] ${hideCard ? "bg-transparent" : "bg-white"}`}
+      id="why-us"
+    >
       {/* Heading */}
-      <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-6xl font-black">
-          What our sippers say
-        </h2>
-      </div>
+      {!hideCard && (
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-6xl font-black">
+            What our sippers say
+          </h2>
+        </div>
+      )}
 
       {/* Marquee */}
       <div className="overflow-x-hidden overflow-y-visible py-15">
@@ -81,20 +88,22 @@ export default function TestimonialSection() {
                 }}
               >
                 {/* CARD */}
-                <div
-                  className="rounded-3xl p-8 w-[280px] shadow-lg text-center"
-                  style={{
-                    backgroundColor: item.bg,
-                    color: item.text,
-                  }}
-                >
-                  <p className="font-bold text-lg leading-snug">
-                    "{item.quote}"
-                  </p>
-                  <p className="mt-4 text-sm italic opacity-80">
-                    {item.author}
-                  </p>
-                </div>
+                {!hideCard && (
+                  <div
+                    className="rounded-3xl p-8 w-[280px] shadow-lg text-center"
+                    style={{
+                      backgroundColor: item.bg,
+                      color: item.text,
+                    }}
+                  >
+                    <p className="font-bold text-lg leading-snug">
+                      "{item.quote}"
+                    </p>
+                    <p className="mt-4 text-sm italic opacity-80">
+                      {item.author}
+                    </p>
+                  </div>
+                )}
 
                 {/* SVG */}
                 <img
