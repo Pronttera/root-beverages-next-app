@@ -186,7 +186,7 @@ const HeroSection = () => {
                 backgroundRepeat: "no-repeat",
                 maskSize: "45rem",
                 backgroundSize: "45rem",
-                zoom: !isMobile ? 0.6 : 1,
+                zoom: isMobile ? 0.6 : 1,
               }}
               initial={{
                 scale: 0,
