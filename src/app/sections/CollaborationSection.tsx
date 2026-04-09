@@ -41,7 +41,7 @@ export default function CollaborationSection() {
 
   return (
     <section
-      id="lets-colloborate"
+      id="lets-collaborate"
       className="relative dotted-bg py-32 px-6 md:px-16 lg:px-24"
     >
       {/* RED BACKGROUND */}

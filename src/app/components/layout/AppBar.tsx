@@ -25,7 +25,7 @@ const AppBar: React.FC<AppBarProps> = ({
     { label: "About Roots", href: "#about-roots" },
     { label: "Our Flavours", href: "#our-flavours" },
     { label: "Why Us", href: "#why-us" },
-    { label: "Let's Colloborate", href: "#lets-colloborate" },
+    { label: "Let's Collaborate", href: "#lets-collaborate" },
   ],
 }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -101,7 +101,7 @@ const AppBar: React.FC<AppBarProps> = ({
                 alt="Root Beverages"
                 width={160}
                 height={60}
-                className="h-8 md:h-19 w-auto object-contain"
+                className="h-8 md:h-15 w-auto object-contain"
                 priority
               />
               <p className="text-white text-base md:text-3xl font-bold">
