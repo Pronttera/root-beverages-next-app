@@ -8,8 +8,7 @@ import Typography from "../components/Common/Typography";
 const SLIDES = [
   {
     id: 1,
-    image:
-      "https://t4.ftcdn.net/jpg/09/10/09/75/360_F_910097561_8uUqHdglYYAPZQKWeH6VGJHHrST4u3OI.jpg",
+    image: "orange.jpeg",
     tagline: "Fizzy. Natural. Alive.",
     heading: "Drink that\nloves your gut",
     bg: "#6DB54E",
@@ -17,8 +16,7 @@ const SLIDES = [
   },
   {
     id: 2,
-    image:
-      "https://t4.ftcdn.net/jpg/09/10/09/75/360_F_910097561_8uUqHdglYYAPZQKWeH6VGJHHrST4u3OI.jpg",
+    image: "pink.jpeg",
     tagline: "Real Ingredients. Real Benefits.",
     heading: "Brewed tea with\nlive probiotics",
     bg: "#FBEF43",
@@ -26,11 +24,18 @@ const SLIDES = [
   },
   {
     id: 3,
-    image:
-      "https://t4.ftcdn.net/jpg/09/10/09/75/360_F_910097561_8uUqHdglYYAPZQKWeH6VGJHHrST4u3OI.jpg",
+    image: "orange.jpeg",
     tagline: "Any time. Every time.",
     heading: "Your daily sip\nof wellness",
     bg: "#7F4E9F",
+    textColor: "white",
+  },
+  {
+    id: 2,
+    image: "pink.jpeg",
+    tagline: "Real Ingredients. Real Benefits.",
+    heading: "Brewed tea with\nlive probiotics",
+    bg: "#FBEF43",
     textColor: "white",
   },
 ];
@@ -154,29 +159,53 @@ const HeroSection = () => {
         </div>
 
         {/* Image — sprite strip */}
-        <div className="flex-1 flex items-center justify-center relative h-[420px] md:h-[600px] w-full overflow-hidden">
+        <motion.div
+          className="flex-1 flex items-center justify-center relative h-[420px] md:h-[600px] w-full overflow-hidden"
+          style={{
+            maskImage: "url(./bottle-mask.png)",
+            maskPosition: "center",
+            maskRepeat: "no-repeat",
+            backgroundImage: "url(./bottle.png)",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            maskSize: 800,
+            backgroundSize: 800,
+          }}
+          initial={{
+            scale: 0,
+          }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 0.5 }}
+        >
           <motion.div
             className="flex h-full"
-            style={{ width: `${SLIDES.length * 100}%` }}
-            animate={{ x: `-${(activeIndex / SLIDES.length) * 100}%` }}
-            transition={{ duration: 0.55, ease: [0.4, 0, 0.2, 1] }}
+            style={{
+              width: 640,
+              marginTop: 80,
+              mixBlendMode: "hard-light",
+            }}
+            animate={{ x: -(activeIndex * 640) }}
+            transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1] }}
           >
             {SLIDES.map((s) => (
               <div
                 key={s.id}
                 className="h-full flex items-center justify-center flex-shrink-0"
-                style={{ width: `${100 / SLIDES.length}%` }}
+                // style={{ width: `${100 / SLIDES.length}%` }}
+                style={{
+                  width: 640,
+                }}
               >
                 <img
                   src={s.image}
                   alt={s.heading}
-                  className="object-contain w-full h-full drop-shadow-2xl"
-                  style={{ maxHeight: 560 }}
+                  className="w-full h-full drop-shadow-2xl"
+                  style={{ height: 300, width: 640, flex: 0 }}
                 />
               </div>
             ))}
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </motion.section>
   );
