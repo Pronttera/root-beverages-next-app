@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Typography from "../components/Common/Typography";
@@ -73,18 +73,27 @@ const HeroSection = () => {
 
   const slide = SLIDES[activeIndex];
 
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
   return (
     <>
       <motion.section
-        className="relative dotted-bg md:py-28 py-14"
+        className="relative overflow-hidden dotted-bg md:py-28 py-14"
         animate={{ backgroundColor: slide.bg }}
         transition={{ duration: 0.5 }}
+        id="hero"
       >
         <div className="flex items-center overflow-hidden">
           {/* Background colour layer */}
           <div className="absolute inset-0 z-0" />
 
-          <div className="relative z-10 w-full max-w-[1900px] mx-auto px-8 md:px-16 flex flex-col md:flex-row items-center gap-12 py-32 md:py-0">
+          <div className="relative z-10 w-full max-w-[1900px] mx-auto px-8 md:px-16  flex flex-col-reverse md:flex-row items-center gap-12 py-12 md:py-0">
             {/* Text */}
             <div className="flex-1 flex flex-col gap-4 md:gap-6">
               <AnimatePresence mode="wait">
@@ -167,7 +176,7 @@ const HeroSection = () => {
 
             {/* Image — sprite strip */}
             <motion.div
-              className="flex-1 flex items-center justify-center relative h-[420px] md:h-[600px] w-full overflow-hidden"
+              className="flex-1 flex items-center justify-center relative h-[600px] w-full overflow-hidden"
               style={{
                 maskImage: "url(./bottle-mask.png)",
                 maskPosition: "center",
@@ -177,6 +186,7 @@ const HeroSection = () => {
                 backgroundRepeat: "no-repeat",
                 maskSize: "45rem",
                 backgroundSize: "45rem",
+                zoom: !isMobile ? 0.6 : 1,
               }}
               initial={{
                 scale: 0,
@@ -185,7 +195,7 @@ const HeroSection = () => {
               exit={{ scale: 0.5 }}
             >
               <motion.div
-                className="flex h-full"
+                className="flex h-[600px] md:h-full"
                 style={{
                   width: 640,
                   marginTop: 80,
@@ -215,7 +225,7 @@ const HeroSection = () => {
             </motion.div>
           </div>
         </div>
-        <Container className="mt-4 md:mt-12 flex justify-center gap-18">
+        <Container className="mt-4 md:mt-12 flex flex-col md:flex-row justify-center gap-4 md:gap-18">
           <FlowerButton
             textColor="#E23375"
             bg="white"
@@ -235,7 +245,7 @@ const HeroSection = () => {
             startAdornment={{ type: "src", src: "/blinkit-icon.svg" }}
           />
         </Container>
-        <div className="mt-[-41rem] relative">
+        <div className="mt-[-60rem]- md:mt-[-41rem]- absolute top-4 md:bottom-1/4">
           <TestimonialSection hideCard />
         </div>
       </motion.section>

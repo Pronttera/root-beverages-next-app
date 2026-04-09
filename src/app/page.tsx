@@ -14,12 +14,11 @@ export default function Home() {
     <>
       <SplashScreen />
       <AppBar />
-
       <HeroSection />
       <AboutSection />
       <FlavoursSection />
       <TestimonialSection />
-      <CollaborationSection/>
+      <CollaborationSection />
       <Footer />
     </>
   );

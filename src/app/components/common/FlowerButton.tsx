@@ -28,14 +28,16 @@ const FlowerButton: React.FC<FlowerButtonProps> = ({
   className = "",
 }) => {
   return (
-    <div className={`flex justify-center pt-6 relative ${className}`}>
+    <div
+      className={`flex justify-center pt-6 w-fit mx-auto md:mx-0 relative ${className}`}
+    >
       {/* LEFT FLOWER */}
       <motion.img
         src={flowerSrc}
         alt="flower"
         animate={{ rotate: 360 }}
         transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-        className="hidden md:block absolute left-[-1.5rem] w-[3.75rem] h-[3.75rem]"
+        className="md:block absolute left-[-1.5rem] w-[3.75rem] h-[3.75rem]"
       />
 
       {/* RIGHT FLOWER */}
@@ -44,7 +46,7 @@ const FlowerButton: React.FC<FlowerButtonProps> = ({
         alt="flower"
         animate={{ rotate: -360 }}
         transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-        className="hidden md:block absolute right-[-1.5rem] w-[3.75rem] h-[3.75rem]"
+        className="md:block absolute right-[-1.5rem] w-[3.75rem] h-[3.75rem]"
       />
 
       {/* BUTTON */}

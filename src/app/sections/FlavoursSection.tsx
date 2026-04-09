@@ -1,9 +1,10 @@
- "use client";
+"use client";
 import React, { useState, useEffect } from "react";
 import Section from "../components/common/Section";
 import Container from "../components/common/Container";
 import Typography from "../components/common/Typography";
 import Button from "../components/common/Button";
+import FlowerButton from "../components/common/FlowerButton";
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
 
@@ -164,9 +165,7 @@ export default function FlavoursSection() {
                   key={card.id}
                   className="flex-shrink-0 rounded-3xl overflow-hidden flex flex-col shadow-lg"
                   style={{
-                    width: isMobile
-                      ? "100%"
-                      : `calc(100% / ${VISIBLE} - 16px)`,
+                    width: isMobile ? "100%" : `calc(100% / ${VISIBLE} - 16px)`,
                     backgroundColor: card.bgColor,
                     minHeight: isMobile ? "460px" : "560px",
                   }}
@@ -328,43 +327,18 @@ export default function FlavoursSection() {
         </div>
 
         {/* ── Order Now CTA ── */}
-          <div className="flex justify-center pt-6 relative">
-
-  {/* LEFT FLOWER */}
-  <motion.img
-    src="/yuzu-lavender-backdrop2.svg"
-    alt="flower"
-    animate={{ rotate: 360 }}
-    transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-    className="hidden md:block absolute left-133 w-[60px] h-[60px] -translate-x-1/2"
-  />
-
-  {/* RIGHT FLOWER */}
-  <motion.img
-    src="/yuzu-lavender-backdrop2.svg"
-    alt="flower"
-    animate={{ rotate: -360 }}
-    transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-    className="hidden md:block absolute right-133 w-[60px] h-[60px] translate-x-1/2"
-  />
-
-  {/* BUTTON */}
-  <button
-    className="relative z-10 bg-[#E53935] text-white font-bold 
-               w-[260px] md:w-[300px] py-4 rounded-full text-lg md:text-xl 
-               shadow-lg hover:scale-105 transition-all duration-300 
-               flex items-center justify-center gap-3"
-  >
-    {/* LUCIDE ICON */}
-    <span className="w-7 h-7 bg-white rounded-full flex items-center justify-center">
-      <MapPin className="w-4 h-4 text-[#E53935]" />
-    </span>
-
-    Order Now
-  </button>
-
-</div>
- 
+        <div className="flex justify-center pt-6">
+          <FlowerButton
+            label="Order Now"
+            textColor="#E23375"
+            bg="white"
+            className="mt-4 md:mt-12"
+            onClick={() => {
+              const el = document.getElementById("contact");
+              el?.scrollIntoView({ behavior: "smooth" });
+            }}
+          />
+        </div>
       </Container>
     </Section>
   );
