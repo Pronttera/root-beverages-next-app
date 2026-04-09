@@ -101,10 +101,10 @@ const AppBar: React.FC<AppBarProps> = ({
                 alt="Root Beverages"
                 width={160}
                 height={60}
-                className="h-8 md:h-19 w-auto object-contain"
+                className="h-8 md:h-15 w-auto object-contain"
                 priority
               />
-              <span className="text-white font-black text-lg md:text-lg leading-tight">
+              <span className="text-white font-black text-lg md:text-xl leading-tight">
                 Root Beverages
               </span>
             </div>
