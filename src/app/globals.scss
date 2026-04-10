@@ -9,6 +9,10 @@
   --color-tomato: #eb373e;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-height: 100%;
   display: flex;

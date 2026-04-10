@@ -27,6 +27,7 @@ const Section: React.FC<SectionProps> = ({
     );
   return (
     <section
+      id={id}
       className={`relative px-4 py-12 md:py-24 md:px-4 ${className}`}
       style={style}
     >

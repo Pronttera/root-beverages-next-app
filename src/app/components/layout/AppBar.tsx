@@ -60,10 +60,23 @@ const AppBar: React.FC<AppBarProps> = ({
   const closeDrawer = () => setIsDrawerOpen(false);
 
   const handler = (href: string) => {
-    router.push(href);
-    // Explicitly update hash if it's an internal link
     if (href.startsWith("#")) {
-      setCurrentHash(href);
+      if (pathname === "/") {
+        // Find the element and smoothly scroll to it if we're already on the home page
+        const el = document.querySelector(href);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+        // Update URL and state
+        window.history.pushState(null, "", href);
+        setCurrentHash(href);
+      } else {
+        // If we're on another page, navigate to the home page with the hash
+        router.push(`/${href}`);
+      }
+    } else {
+      router.push(href);
+      setCurrentHash("");
     }
   };
 
