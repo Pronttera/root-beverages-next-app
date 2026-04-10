@@ -1,11 +1,11 @@
-"use client";
+ "use client";
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Section from "../components/common/Section";
 import Container from "../components/common/Container";
 import Typography from "../components/Common/Typography";
-import { ChevronDown } from "lucide-react"; // I'll assume lucide-react is available or use a generic SVG
+import { ChevronDown } from "lucide-react";
 
 const FAQ_DATA = [
   {
@@ -13,18 +13,18 @@ const FAQ_DATA = [
     question: "What is Root, exactly?",
     answer:
       "Root is a refreshing mix of brewed tea, live probiotics, 100% natural flavors, and a whole lot of good vibes. Root is low in sugar, made with natural ingredients, and contains no added preservatives, just honest fizz that loves your gut.",
-    activeBg: "#7F4E9F", // Purple from AboutSection
-    inactiveBg: "#FBEF43", // Yellow from AboutSection
-    questionColor: "#FBEF43", // Yellow for expanded
-    answerColor: "#FFFFFF", // White for expanded
-    inactiveTextColor: "#EB373E", // Tomato color for text when inactive
+    activeBg: "#7F4E9F",
+    inactiveBg: "#FBEF43",
+    questionColor: "#FBEF43",
+    answerColor: "#FFFFFF",
+    inactiveTextColor: "#EB373E",
   },
   {
     id: 2,
     question: "What is actually inside the can?",
     answer:
       "Every can of Root is packed with organic tea bases, real fruit extracts, and billions of live cultures (probiotics) to support your digestive health. No artificial sweeteners, no hidden nasties.",
-    activeBg: "#6DB54E", // Green from AboutSection
+    activeBg: "#6DB54E",
     inactiveBg: "#FBEF43",
     questionColor: "#FBEF43",
     answerColor: "#FFFFFF",
@@ -35,7 +35,7 @@ const FAQ_DATA = [
     question: "Do you offer wholesale pricing?",
     answer:
       "Yes! We love partnering with retailers, cafes, and distributors who share our passion for healthy living. Reach out via our contact page for wholesale rates and bulk orders.",
-    activeBg: "#EB373E", // Tomato from AboutSection
+    activeBg: "#EB373E",
     inactiveBg: "#FBEF43",
     questionColor: "#FBEF43",
     answerColor: "#FFFFFF",
@@ -65,7 +65,7 @@ const FAQ_DATA = [
   },
 ];
 
-const  FAQSection = () => {
+const FAQSection = () => {
   const [openId, setOpenId] = useState<number | null>(1);
 
   return (
@@ -74,14 +74,14 @@ const  FAQSection = () => {
         id="testimonial-section"
         className="dotted-bg bg-tomato py-20 md:py-32 scroll-mt-25"
       >
-        <Container className="max-w-4xl">
+        <Container className="max-w-4xl px-4   md:px-0">
           <Typography
             variant="h1"
             className="!mb-24 text-center"
             style={{
               fontWeight: 900,
               color: "black",
-              fontSize: 70,
+              fontSize: "clamp(36px, 8vw, 70px)",
               WebkitTextFillColor: "white",
               WebkitTextStrokeWidth: "0.2em",
               WebkitTextStrokeColor: "black",
@@ -129,13 +129,16 @@ const AccordionItem = ({
         transition={{ duration: 0.3 }}
       >
         <div className="relative flex items-center justify-between gap-4 px-4 py-2 min-h-[62px]">
-          <div className="absolute t-300ms left-0 left-[-23px] top-0 w-8 h-8 md:w-12 md:h-12 z-0">
+          {/* LEFT FLOWER */}
+          <div className="absolute top-0 left-[-20px] md:left-[-30px] w-6  md:h-[62px] h-[60px] md:w-10 z-0">
             <FlowerDecoration
               color={isOpen ? item.activeBg : item.inactiveBg}
             />
           </div>
-          <div className="absolute t-300ms right-[-48px] top-[0px] w-8 h-8 md:w-12 md:h-12 z-0">
-            <FlowerDecoration
+
+          {/* RIGHT FLOWER */}
+          <div className="absolute top-0 right-[-16px] md:right-[-29px] w-6  md:h-[62px] h-[60px] md:w-9 z-0">
+            <FlowerDecoration 
               color={isOpen ? item.activeBg : item.inactiveBg}
               flipped
             />
@@ -202,7 +205,7 @@ const FlowerDecoration = ({
       viewBox="0 0 34 89"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-auto h-[62px]"
+      className="w-full h-full"
       style={{
         transform: `${flipped ? "scaleX(-1)" : ""} rotate(180deg)`,
         transition: "fill 0.3s ease",
@@ -223,4 +226,4 @@ const FlowerDecoration = ({
   );
 };
 
-export default  FAQSection;
+export default FAQSection;
