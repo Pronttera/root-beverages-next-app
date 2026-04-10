@@ -101,7 +101,7 @@ export default function CollaborationSection() {
   return (
     <section
       id="lets-collaborate"
-      className="relative dotted-bg pt-8 pb-20 px-6 md:px-16 lg:px-24"
+      className="relative dotted-bg pt-8 md:pt-26 pb-20 px-6 md:px-16 lg:px-24"
     >
       <div className="absolute top-0 left-0 md:top-[10%] w-full h-[600px] bg-[#E53935] z-0" />
 

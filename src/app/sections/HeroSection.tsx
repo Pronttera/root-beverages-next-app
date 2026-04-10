@@ -93,7 +93,7 @@ const HeroSection = () => {
           {/* Background colour layer */}
           <div className="absolute inset-0 z-0" />
 
-          <div className="relative z-10 w-full max-w-[1900px] mx-auto px-8 md:px-16  flex flex-col-reverse md:flex-row md:items-center md:gap-12 py-12 md:py-0 mt-[-8rem]">
+          <div className="relative z-10 w-full max-w-[1900px] mx-auto px-8 md:px-16  flex flex-col-reverse md:flex-row md:items-center md:gap-12 py-12 md:py-0">
             {/* Text */}
             <div className="flex-1 md:flex flex-col-reverse justify-center md:justify-start mt-[-4rem] md:mt-0 md:flex-col gap-4 md:gap-6">
               <AnimatePresence mode="wait">
@@ -188,13 +188,15 @@ const HeroSection = () => {
                 scale: isMobile ? 0.6 : 1,
               }}
             >
-              <div
+              <motion.div
                 className="flex h-[600px] md:h-full"
                 style={{
                   width: 640,
                   marginTop: 80,
                   mixBlendMode: "hard-light",
                 }}
+                animate={{ x: -(activeIndex * 640) }}
+                transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1] }}
               >
                 {SLIDES.map((s) => (
                   <div
@@ -213,7 +215,7 @@ const HeroSection = () => {
                     />
                   </div>
                 ))}
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
