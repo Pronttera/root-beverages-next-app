@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Typography from "../components/Common/Typography";
 
 const TESTIMONIALS = [
   {
@@ -52,16 +53,14 @@ const LOOP = [...TESTIMONIALS, ...TESTIMONIALS];
 export default function TestimonialSection({ hideCard = false }: any) {
   return (
     <section
-      className={`dotted-bg py-20 md:py-32 min-h-[650px] ${hideCard ? "bg-transparent" : "bg-white"}`}
+      className={`dotted-bg pt-20 pb-0 md:py-32 min-h-[650px] ${hideCard ? "bg-transparent" : "bg-white"}`}
       id="why-us"
     >
       {/* Heading */}
       {!hideCard && (
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-black">
-            What our sippers say
-          </h2>
-        </div>
+        <Typography variant="h2" className="!text-center md:!mb-16 mb-8">
+          What our sippers say
+        </Typography>
       )}
 
       {/* Marquee */}

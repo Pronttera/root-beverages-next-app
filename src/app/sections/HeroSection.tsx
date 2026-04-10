@@ -84,7 +84,7 @@ const HeroSection = () => {
   return (
     <>
       <motion.section
-        className="relative overflow-hidden dotted-bg md:py-28 py-14"
+        className="relative overflow-hidden dotted-bg md:py-28 py-4"
         animate={{ backgroundColor: slide.bg }}
         transition={{ duration: 0.5 }}
         id="hero"
@@ -93,9 +93,9 @@ const HeroSection = () => {
           {/* Background colour layer */}
           <div className="absolute inset-0 z-0" />
 
-          <div className="relative z-10 w-full max-w-[1900px] mx-auto px-8 md:px-16  flex flex-col-reverse md:flex-row items-center gap-12 py-12 md:py-0">
+          <div className="relative z-10 w-full max-w-[1900px] mx-auto px-8 md:px-16  flex flex-col-reverse md:flex-row md:items-center md:gap-12 py-12 md:py-0 mt-[-8rem]">
             {/* Text */}
-            <div className="flex-1 flex flex-col gap-4 md:gap-6">
+            <div className="flex-1 md:flex flex-col-reverse justify-center md:justify-start mt-[-4rem] md:mt-0 md:flex-col gap-4 md:gap-6">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={slide.id + "-text"}
@@ -114,9 +114,8 @@ const HeroSection = () => {
                   <Typography
                     variant="h1"
                     style={{
-                      fontWeight: 900,
-                      fontSize: "clamp(48px, 7vw, 100px)",
-                      lineHeight: 1.05,
+                      //   fontWeight: 900,
+                      //   fontSize: "clamp(48px, 7vw, 100px)",
                       color: "black",
                       WebkitTextFillColor: slide.textColor,
                       WebkitTextStrokeWidth: "0.04em",
@@ -132,7 +131,7 @@ const HeroSection = () => {
               </AnimatePresence>
 
               {/* Nav Buttons */}
-              <div className="flex items-center gap-6 mt-6">
+              <div className="flex items-center justify-center gap-6 mt-6">
                 <NavButton
                   onClick={() => paginate(-1)}
                   bg={slide.textColor === "white" ? "white" : "black"}
@@ -175,7 +174,7 @@ const HeroSection = () => {
             </div>
 
             {/* Image — sprite strip */}
-            <motion.div
+            <div
               className="flex-1 flex items-center justify-center relative h-[600px] w-full overflow-hidden"
               style={{
                 maskImage: "url(./bottle-mask.png)",
@@ -186,23 +185,16 @@ const HeroSection = () => {
                 backgroundRepeat: "no-repeat",
                 maskSize: "45rem",
                 backgroundSize: "45rem",
-                zoom: isMobile ? 0.6 : 1,
+                scale: isMobile ? 0.6 : 1,
               }}
-              initial={{
-                scale: 0,
-              }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.5 }}
             >
-              <motion.div
+              <div
                 className="flex h-[600px] md:h-full"
                 style={{
                   width: 640,
                   marginTop: 80,
                   mixBlendMode: "hard-light",
                 }}
-                animate={{ x: -(activeIndex * 640) }}
-                transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1] }}
               >
                 {SLIDES.map((s) => (
                   <div
@@ -221,11 +213,11 @@ const HeroSection = () => {
                     />
                   </div>
                 ))}
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           </div>
         </div>
-        <Container className="mt-4 md:mt-12 flex flex-col md:flex-row justify-center gap-4 md:gap-18">
+        <Container className="mt-4 mb-8 md:mb-0 md:mt-12 flex flex-col md:flex-row justify-center gap-4 md:gap-18">
           <FlowerButton
             textColor="#E23375"
             bg="white"

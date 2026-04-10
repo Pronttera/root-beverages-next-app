@@ -1,4 +1,4 @@
- "use client";
+"use client";
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -74,18 +74,13 @@ const FAQSection = () => {
         id="testimonial-section"
         className="dotted-bg bg-tomato py-20 md:py-32 scroll-mt-25"
       >
-        <Container className="max-w-4xl px-4   md:px-0">
+        <Container className="max-w-4xl px-4 md:px-0">
           <Typography
-            variant="h1"
-            className="!mb-24 text-center"
+            variant="h2"
+            className="!mb-12 !md:mb-24 text-center"
             style={{
               fontWeight: 900,
-              color: "black",
-              fontSize: "clamp(36px, 8vw, 70px)",
-              WebkitTextFillColor: "white",
-              WebkitTextStrokeWidth: "0.2em",
-              WebkitTextStrokeColor: "black",
-              paintOrder: "stroke fill",
+              color: "white",
             }}
           >
             Frequently Asked Questions
@@ -138,14 +133,14 @@ const AccordionItem = ({
 
           {/* RIGHT FLOWER */}
           <div className="absolute top-0 right-[-16px] md:right-[-29px] w-6  md:h-[62px] h-[60px] md:w-9 z-0">
-            <FlowerDecoration 
+            <FlowerDecoration
               color={isOpen ? item.activeBg : item.inactiveBg}
               flipped
             />
           </div>
 
           <Typography
-            className="flex-1 font-black text-xl mb-0!"
+            className="flex-1 font-black text-base md:text-xl mb-0!"
             style={{
               color: isOpen ? item.questionColor : item.inactiveTextColor,
               transition: "color 0.3s ease",

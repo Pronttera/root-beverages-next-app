@@ -128,6 +128,11 @@ export default function FlavoursSection() {
             <span className="inline-block bg-white text-black text-md px-4 py-1 rounded-full mb-4 md:mb-6">
               Our Sodas
             </span>
+            <Typography variant="h2" className="!text-white">
+              Dirty Sodas.
+              <br />
+              Clean Hits.
+            </Typography>
             <h2
               className="text-white uppercase leading-[0.9]"
               style={{
@@ -136,13 +141,9 @@ export default function FlavoursSection() {
                 // fontFamily: "Anton, Impact, sans-serif",
                 letterSpacing: "-2px",
               }}
-            >
-              Dirty Sodas.
-              <br />
-              Clean Hits.
-            </h2>
+            ></h2>
           </div>
-          <div className="max-w-md md:pt-34">
+          <div className="max-w-md md:pt-16">
             <p className="text-white/90 text-base md:text-[18px] leading-relaxed">
               Whether you're in the mood for something fruity, fizzy, or
               fabulously refreshing, our collection of beverages and juices has
@@ -183,19 +184,17 @@ export default function FlavoursSection() {
                   {/* Text */}
                   <div className="flex-1 px-6 py-6 md:py-8 flex flex-col justify-end space-y-1">
                     <Typography
-                      variant="h3"
-                      className="!text-2xl md:!text-4xl !font-black uppercase !mb-0 !leading-tight !mt-0"
+                      variant="lead2"
                       style={{
                         color: card.textColor,
-                        fontFamily: "'Anton', 'Impact', sans-serif",
-                        letterSpacing: "-0.5px",
+                        fontWeight: 900,
                       }}
                     >
                       {card.name}
                     </Typography>
                     <Typography
-                      variant="label"
-                      className="!text-sm md:!text-lg !opacity-85 !mb-0 !mt-1"
+                      variant="lead1"
+                      className="!mt-1"
                       style={{ color: card.textColor }}
                     >
                       {card.ingredients}

@@ -1,4 +1,4 @@
- "use client";
+"use client";
 import React, { useState } from "react";
 import { Phone, Mail, Globe, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
@@ -17,7 +17,7 @@ export default function CollaborationSection() {
   const [showModal, setShowModal] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
@@ -40,8 +40,6 @@ export default function CollaborationSection() {
       newErrors.phone = "Enter valid +91 phone number";
     }
 
-    
-
     if (!form.city) newErrors.city = "City is required";
     if (!form.country) newErrors.country = "Country is required";
     if (!form.message) newErrors.message = "Message is required";
@@ -60,7 +58,7 @@ export default function CollaborationSection() {
     const city = capitalize(form.city);
     const country = capitalize(form.country);
 
-    const whatsappNumber = "91706660839"; 
+    const whatsappNumber = "91706660839";
 
     const text = `Hey, I'm ${form.name} and I'm interested in collaborating with Root Beverages! 
 
@@ -103,13 +101,13 @@ export default function CollaborationSection() {
   return (
     <section
       id="lets-collaborate"
-      className="relative dotted-bg py-32 px-6 md:px-16 lg:px-24"
+      className="relative dotted-bg pt-8 pb-20 px-6 md:px-16 lg:px-24"
     >
-      <div className="absolute left-0 top-[10%] w-full h-[600px] bg-[#E53935] z-0" />
+      <div className="absolute top-0 left-0 md:top-[10%] w-full h-[600px] bg-[#E53935] z-0" />
 
       <div className="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start">
         {/* LEFT */}
-        <div className="text-white md:mt-5 mt-15">
+        <div className="text-white md:mt-5">
           <h2
             className="text-4xl md:text-6xl font-black"
             style={{ WebkitTextStroke: "2px black", paintOrder: "stroke fill" }}
@@ -187,9 +185,7 @@ export default function CollaborationSection() {
                   className="border bg-[#fdf5f5] border-[#f1dede] rounded-xl px-5 py-4 text-lg outline-none focus:border-red-500 resize-none w-full"
                 />
                 {errors.message && (
-                  <p className="text-red-500 text-sm mt-1">
-                    {errors.message}
-                  </p>
+                  <p className="text-red-500 text-sm mt-1">{errors.message}</p>
                 )}
               </div>
             </div>

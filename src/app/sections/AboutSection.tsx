@@ -43,7 +43,7 @@ const AboutSection = () => {
   return (
     <Section
       id="about-roots"
-      className="dotted-bg bg-tomato py-20 md:py-32 min-h-screen"
+      className="dotted-bg bg-tomato pt-20 pb-12 md:py-32 min-h-screen"
     >
       <Container>
         {/* Mobile layout */}
@@ -92,25 +92,26 @@ const MobileAboutCard = ({ item, index }: { item: any; index: number }) => {
       }}
     >
       {/* Text block */}
-      <div className="flex flex-col gap-3 px-6 pt-8 pb-4">
+      <div className="flex flex-col gap-3 px-6 pt-16 pb-4">
         <Typography
-          variant="h1"
+          variant="h2"
           style={{
-            fontWeight: 900,
-            fontSize: "clamp(34px, 10vw, 52px)",
             WebkitTextFillColor: "white",
-            WebkitTextStrokeWidth: "0.15em",
+            WebkitTextStrokeWidth: "0.04em",
             WebkitTextStrokeColor: "black",
             paintOrder: "stroke fill",
             whiteSpace: "pre-line",
-            lineHeight: 1.1,
+            lineHeight: 1.3,
+            // WebkitTextStrokeWidth: "0.04em",
+            // WebkitTextStrokeColor: "black",
+            // paintOrder: "stroke fill",
           }}
         >
           {item.title}
         </Typography>
         <Typography
           variant="body"
-          className={`font-medium leading-relaxed text-sm ${
+          className={`font-medium leading-relaxed ${
             item.textColor === "white" ? "!text-white" : "!text-black"
           }`}
         >
@@ -203,15 +204,16 @@ const DesktopAboutCard = ({ item, index }: { item: any; index: number }) => {
       <div className={`flex flex-col gap-6 w-1/2`}>
         <motion.div style={{ x }}>
           <Typography
-            variant="h1"
+            variant="h2"
             style={{
-              fontWeight: 900,
-              color: "black",
-              fontSize: 70,
+              // fontWeight: 900,
+              // color: "black",
+              // fontSize: 70,
               WebkitTextFillColor: "white",
-              WebkitTextStrokeWidth: "0.2em",
+              WebkitTextStrokeWidth: "0.04em",
               WebkitTextStrokeColor: "black",
               paintOrder: "stroke fill",
+              whiteSpace: "pre-line",
             }}
           >
             {item.title}
