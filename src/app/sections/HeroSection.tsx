@@ -89,13 +89,13 @@ const HeroSection = () => {
         transition={{ duration: 0.5 }}
         id="hero"
       >
-        <div className="flex items-center overflow-hidden">
+        <div className="flex items-center overflow-hidden mt-[-6rem] md:mt-0">
           {/* Background colour layer */}
           <div className="absolute inset-0 z-0" />
 
           <div className="relative z-10 w-full max-w-[1900px] mx-auto px-8 md:px-16  flex flex-col-reverse md:flex-row md:items-center md:gap-12 py-12 md:py-0">
             {/* Text */}
-            <div className="flex-1 md:flex flex-col-reverse justify-center md:justify-start mt-[-4rem] md:mt-0 md:flex-col gap-4 md:gap-6">
+            <div className="flex-1 md:flex flex-col-reverse justify-center md:justify-start md:flex-col gap-4 md:gap-6">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={slide.id + "-text"}
