@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const scrollTo = (href: string) => {
   const el = document.querySelector(href);
@@ -9,8 +10,21 @@ const scrollTo = (href: string) => {
 };
 
 export default function Footer() {
+const router = useRouter();
+
+  const scrollTo = (href: string) => {
+    const el = document.querySelector(href);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // Not on homepage — navigate there with hash
+      router.push(`/${href}`);
+    }
+  };
+
   return (
     <footer className="dotted-bg bg-white pt-20">
+
 
       {/* ── Desktop layout ── */}
       <div className="hidden md:grid max-w-7xl mx-auto px-6 md:px-16 lg:px-24 md:grid-cols-4 gap-10 items-start">
