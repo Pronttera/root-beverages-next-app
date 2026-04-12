@@ -97,7 +97,7 @@ const HeroSection = () => {
         transition={{ duration: 0.5 }}
         id="hero"
       >
-        <div className="flex items-center overflow-hidden mt-[-6rem] md:mt-[0rem]">
+        <div className="flex items-center overflow-hidden mt-[-6rem] md:mt-0">
           {/* Background colour layer */}
           <div className="absolute inset-0 z-0" />
 
