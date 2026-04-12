@@ -1,7 +1,7 @@
 import AppBar from "@/app/components/layout/AppBar";
 import Footer from "@/app/components/layout/Footer";
 import Section from "@/app/components/common/Section";
-import Typography from "../components/Common/Typography";
+import Typography from "@/app/components/Common/Typography";
 
 export default function TermsOfService() {
   return (
