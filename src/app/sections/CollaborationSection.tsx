@@ -103,7 +103,7 @@ export default function CollaborationSection() {
       id="lets-collaborate"
       className="relative dotted-bg pt-8 md:pt-26 pb-20 px-6 md:px-16 lg:px-24"
     >
-      <div className="absolute top-0 left-0 md:top-[10%] w-full h-[600px] bg-[#E53935] z-0" />
+      <div className="absolute top-0 left-0 md:top-[10%] w-full h-[600px] bg-[#f9511d] z-0" />
 
       <div className="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start">
         {/* LEFT */}
@@ -210,7 +210,7 @@ export default function CollaborationSection() {
 
               <button
                 onClick={handleSubmit}
-                className="relative z-10 bg-[#E53935] text-white font-bold w-[260px] py-4 rounded-full text-lg shadow-md hover:scale-105 transition-all"
+                className="relative z-10 bg-[#f9511d] text-white font-bold w-[260px] py-4 rounded-full text-lg shadow-md hover:scale-105 transition-all"
               >
                 Submit
               </button>
@@ -232,7 +232,7 @@ export default function CollaborationSection() {
             </p>
             <button
               onClick={() => setShowModal(false)}
-              className="bg-[#E53935] text-white px-6 py-2 rounded-full font-semibold hover:bg-red-600 transition-all hover:scale-105"
+              className="bg-[#f9511d] text-white px-6 py-2 rounded-full font-semibold hover:bg-red-600 transition-all hover:scale-105"
             >
               Close
             </button>

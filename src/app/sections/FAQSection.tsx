@@ -10,58 +10,58 @@ import { ChevronDown } from "lucide-react";
 const FAQ_DATA = [
   {
     id: 1,
-    question: "What is Root, exactly?",
+    question: "What is Root Beverages?",
     answer:
-      "Root is a refreshing mix of brewed tea, live probiotics, 100% natural flavors, and a whole lot of good vibes. Root is low in sugar, made with natural ingredients, and contains no added preservatives, just honest fizz that loves your gut.",
-    activeBg: "#7F4E9F",
+      "Root Beverages is a proudly Indian carbonated drink brand that brings back the flavours you’ve grown up loving. From Amritsari Jeera to Konkani Kokam, we bottle authentic regional tastes with a refreshing fizzy twist.",
+    activeBg: "#FF8F00", // Orange (Nagpur Orange)
     inactiveBg: "#FBEF43",
     questionColor: "#FBEF43",
     answerColor: "#FFFFFF",
-    inactiveTextColor: "#EB373E",
+    inactiveTextColor: "#FF8F00",
   },
   {
     id: 2,
-    question: "What is actually inside the can?",
+    question: "What is actually inside the bottle?",
     answer:
-      "Every can of Root is packed with organic tea bases, real fruit extracts, and billions of live cultures (probiotics) to support your digestive health. No artificial sweeteners, no hidden nasties.",
-    activeBg: "#6DB54E",
+      "Each bottle is crafted using high-quality ingredients, RO-treated water, and carefully balanced flavour blends to deliver a clean, refreshing, and consistent taste in every sip.",
+    activeBg: "#5D4037", // Jeera
     inactiveBg: "#FBEF43",
     questionColor: "#FBEF43",
     answerColor: "#FFFFFF",
-    inactiveTextColor: "#EB373E",
+    inactiveTextColor: "#5D4037",
   },
   {
     id: 3,
     question: "Do you offer wholesale pricing?",
     answer:
-      "Yes! We love partnering with retailers, cafes, and distributors who share our passion for healthy living. Reach out via our contact page for wholesale rates and bulk orders.",
-    activeBg: "#EB373E",
+      "Yes! We partner with retailers, cafes, and distributors across regions. Reach out through our collaborate section to explore bulk orders and wholesale opportunities.",
+    activeBg: "#D32F2F", // Kokam
     inactiveBg: "#FBEF43",
     questionColor: "#FBEF43",
     answerColor: "#FFFFFF",
-    inactiveTextColor: "#EB373E",
+    inactiveTextColor: "#D32F2F",
   },
   {
     id: 4,
-    question: "What makes Root different from other kombucha?",
+    question: "What makes Root different from others?",
     answer:
-      "While many fermented drinks are too vinegary, Root is crafted for a smoother, fruitier taste profile. We also prioritize consistent probiotic counts and high-quality, whole-food ingredients.",
-    activeBg: "#7F4E9F",
+      "We didn’t reinvent flavours, we perfected them. Root focuses on authentic Indian taste, consistent quality, and modern packaging while staying true to regional favourites.",
+    activeBg: "#EC407A", // Guava
     inactiveBg: "#FBEF43",
     questionColor: "#FBEF43",
     answerColor: "#FFFFFF",
-    inactiveTextColor: "#EB373E",
+    inactiveTextColor: "#EC407A",
   },
   {
     id: 5,
-    question: "How do I become a distributor or a partner?",
+    question: "How can I collaborate or become a distributor?",
     answer:
-      "Simply fill out our partnership form on the website! Our team will review your application and get in touch with you within 2-3 business days to discuss collaboration opportunities.",
-    activeBg: "#6DB54E",
+      "Simply fill out the collaboration form on our website. Our team will review your details and get in touch with you shortly to take things forward.",
+    activeBg: "#263238", // Cola
     inactiveBg: "#FBEF43",
     questionColor: "#FBEF43",
     answerColor: "#FFFFFF",
-    inactiveTextColor: "#EB373E",
+    inactiveTextColor: "#263238",
   },
 ];
 

@@ -12,34 +12,33 @@ const AboutSection = () => {
       id: 1,
       title: "What is\nRoot?",
       description:
-        "Bubbly, tangy, and full of life, Root is more than just a beverage. It's a lightly fizzy and naturally fermented tea crafted to support your well-being. This invigorating drink is rich in beneficial bacteria, making it the perfect choice for a happy, thriving gut. Made with simple, natural ingredients, every sip offers a refreshing and delightful path to digestive harmony.",
-      image: "/images/what-is-micha.png",
-      backgroundColor: "#6DB54E",
+        "Root Beverages is a celebration of India’s most loved flavours, reimagined as refreshing, fizzy drinks. From the streets of Amritsar to the coasts of Konkan, we’ve bottled the tastes you grew up loving, now with a modern twist.",
+      image: "/images/what-is-root.png",
+      backgroundColor: "#FF8F00", // orange
       textColor: "white",
       position: "left",
     },
     {
       id: 2,
-      title: "Why Drink\nRoot?",
+      title: "Why Choose\nRoot?",
       description:
-        "Root is like your gut's best friend, bringing in the good bacteria to help you feel your best. It works to keep everything in balance, supporting a happy and harmonious digestive system. When your gut is happy, you will feel it throughout your day!",
-      image: "/images/why-drink-micha.png",
-      backgroundColor: "#FBEF43",
+        "We didn’t invent new flavours, we perfected the ones India already loves. Made with high-quality ingredients, RO-treated water, and zero shortcuts, every bottle delivers authentic taste with consistent quality you can trust.",
+      image: "/images/why-root.png",
+      backgroundColor: "#FDD835", // yellow
       textColor: "black",
       position: "right",
     },
     {
       id: 3,
-      title: "When to\nDrink Root?",
+      title: "When to\nEnjoy Root?",
       description:
-        "You can enjoy Root anytime, anywhere! There's no wrong moment to give your gut a little love. Whether it's a busy morning, a midday pick-me-up, or winding down in the evening, Root fits seamlessly into your routine, helping you maintain balance and feel your best around the clock.",
-      image: "/images/when-to-drink-micha.png",
-      backgroundColor: "#7F4E9F",
+        "Anytime is the right time. Whether it's a hot afternoon, a meal with friends, or a quick refresh break, Root fits every moment. Crack open a bottle and bring back the joy of real Indian flavours.",
+      image: "/images/when-root.png",
+      backgroundColor: "#43A047", // green
       textColor: "white",
       position: "left",
     },
   ];
-
   return (
     <Section
       id="about-roots"

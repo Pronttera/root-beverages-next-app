@@ -22,7 +22,7 @@ const FlowerButton: React.FC<FlowerButtonProps> = ({
   label = "Order Now",
   startAdornment,
   onClick,
-  bg = "#E53935",
+  bg = "#f9511d",
   textColor = "white",
   flowerSrc = "/yuzu-lavender-backdrop2.svg",
   className = "",

@@ -11,34 +11,42 @@ import TestimonialSection from "./TestimonialSection";
 const SLIDES = [
   {
     id: 1,
-    image: "orange.jpeg",
-    tagline: "Fizzy. Natural. Alive.",
-    heading: "Drink that\nloves your gut",
-    bg: "#6DB54E",
+    image: "jeera-wrapper.jpeg",
+    tagline: "Bold. Spiced. Desi.",
+    heading: "Amritsari Jeera\nwith a punch",
+    bg: "#5D4037",
     textColor: "white",
   },
   {
     id: 2,
-    image: "pink.jpeg",
-    tagline: "Real Ingredients. Real Benefits.",
-    heading: "Brewed tea with\nlive probiotics",
-    bg: "#FBEF43",
+    image: "kokam-wrapper.jpeg",
+    tagline: "Tangy. Coastal. Refreshing.",
+    heading: "Konkani Kokam\nin every sip",
+    bg: "#D32F2F",
     textColor: "white",
   },
   {
     id: 3,
-    image: "orange.jpeg",
-    tagline: "Any time. Every time.",
-    heading: "Your daily sip\nof wellness",
-    bg: "#7F4E9F",
+    image: "orange-wrapper.jpeg",
+    tagline: "Zesty. Juicy. Classic.",
+    heading: "Nagpur Orange\nreimagined",
+    bg: "#FF8F00",
     textColor: "white",
   },
   {
-    id: 2,
-    image: "pink.jpeg",
-    tagline: "Real Ingredients. Real Benefits.",
-    heading: "Brewed tea with\nlive probiotics",
-    bg: "#FBEF43",
+    id: 4,
+    image: "guoa-wrapper.jpeg",
+    tagline: "Sweet. Tropical. Nostalgic.",
+    heading: "Guava\nlike never before",
+    bg: "#EC407A",
+    textColor: "white",
+  },
+  {
+    id: 5,
+    image: "cola-wrapper.jpeg",
+    tagline: "Smooth. Classic. Timeless.",
+    heading: "IND Cola\nwith roots",
+    bg: "#263238",
     textColor: "white",
   },
 ];
@@ -95,7 +103,7 @@ const HeroSection = () => {
 
           <div className="relative z-10 w-full max-w-[1900px] mx-auto px-8 md:px-16  flex flex-col-reverse md:flex-row md:items-center md:gap-12 py-12 md:py-0">
             {/* Text */}
-            <div className="flex-1 md:flex flex-col-reverse justify-center md:justify-start md:flex-col gap-4 md:gap-6">
+            <div className="flex-1 md:flex flex-col-reverse justify-center md:justify-start md:flex-col gap-4 md:gap-6 mt-[-10rem]">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={slide.id + "-text"}
@@ -183,19 +191,19 @@ const HeroSection = () => {
                 backgroundImage: "url(./bottle.png)",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
-                maskSize: "45rem",
-                backgroundSize: "45rem",
-                scale: isMobile ? 0.6 : 1,
+                maskSize: "20rem",
+                backgroundSize: "20rem",
+                scale: isMobile ? 0.6 : 1.2,
               }}
             >
               <motion.div
                 className="flex h-[600px] md:h-full"
                 style={{
-                  width: 640,
+                  width: 400,
                   marginTop: 80,
-                  mixBlendMode: "hard-light",
+                  mixBlendMode: "multiply",
                 }}
-                animate={{ x: -(activeIndex * 640) }}
+                animate={{ x: -(activeIndex * 400) }}
                 transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1] }}
               >
                 {SLIDES.map((s) => (
@@ -204,14 +212,14 @@ const HeroSection = () => {
                     className="h-full flex items-center justify-center flex-shrink-0"
                     // style={{ width: `${100 / SLIDES.length}%` }}
                     style={{
-                      width: 640,
+                      width: 400,
                     }}
                   >
                     <img
                       src={s.image}
                       alt={s.heading}
                       className="w-full h-full drop-shadow-2xl"
-                      style={{ height: 300, width: 640, flex: 0 }}
+                      style={{ height: 200, width: 400, flex: 0 }}
                     />
                   </div>
                 ))}
