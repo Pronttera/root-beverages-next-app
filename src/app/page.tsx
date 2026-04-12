@@ -1,9 +1,27 @@
+import AppBar from "./components/layout/AppBar";
+import Footer from "./components/layout/Footer";
+
+import HeroSection from "./sections/HeroSection";
+import AboutSection from "./sections/AboutSection";
+// import TestimonialSection from "./sections/TestimonialSection";
+import CollaborationSection from "./sections/CollaborationSection";
+import FlavoursSection from "./sections/FlavoursSection";
+import TestimonialSection from "./sections/TestimonialSection";
+import SplashScreen from "./components/common/SplashScreen";
+import FAQSection from "./sections/FAQSection";
+// TODO: Add Meta Here
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-black">
-      <h1 className="text-3xl font-bold p-6">
-        Root Beverages
-      </h1>
-    </main>
+    <>
+      <SplashScreen />
+      <AppBar />
+      <HeroSection />
+      <AboutSection />
+      <FlavoursSection />
+      <TestimonialSection />
+      <FAQSection />
+      <CollaborationSection />
+      <Footer />
+    </>
   );
 }
