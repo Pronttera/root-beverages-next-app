@@ -10,6 +10,14 @@ import TestimonialSection from "./TestimonialSection";
 
 const SLIDES = [
   {
+    id: 3,
+    image: "orange-wrapper.jpeg",
+    tagline: "Zesty. Juicy. Classic.",
+    heading: "Nagpur Orange\nreimagined",
+    bg: "#FF8F00",
+    textColor: "white",
+  },
+  {
     id: 1,
     image: "jeera-wrapper.jpeg",
     tagline: "Bold. Spiced. Desi.",
@@ -25,14 +33,7 @@ const SLIDES = [
     bg: "#D32F2F",
     textColor: "white",
   },
-  {
-    id: 3,
-    image: "orange-wrapper.jpeg",
-    tagline: "Zesty. Juicy. Classic.",
-    heading: "Nagpur Orange\nreimagined",
-    bg: "#FF8F00",
-    textColor: "white",
-  },
+
   {
     id: 4,
     image: "guoa-wrapper.jpeg",
