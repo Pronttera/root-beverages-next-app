@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import Typography from "../components/Common/Typography";
+import Typography from "../components/common/Typography";
 
 const TESTIMONIALS = [
   {

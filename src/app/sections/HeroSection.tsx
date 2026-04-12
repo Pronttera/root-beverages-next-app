@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Typography from "../components/Common/Typography";
+import Typography from "../components/common/Typography";
 import Container from "../components/common/Container";
 import FlowerButton from "../components/common/FlowerButton";
 import TestimonialSection from "./TestimonialSection";

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Section from "../components/common/Section";
 import Container from "../components/common/Container";
-import Typography from "../components/Common/Typography";
+import Typography from "../components/common/Typography";
 import { ChevronDown } from "lucide-react";
 
 const FAQ_DATA = [

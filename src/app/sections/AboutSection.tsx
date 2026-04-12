@@ -2,7 +2,7 @@
 import React, { useRef } from "react";
 import Section from "../components/common/Section";
 import Container from "../components/common/Container";
-import Typography from "../components/Common/Typography";
+import Typography from "../components/common/Typography";
 import Button from "../components/common/Button";
 import { motion, useScroll, useTransform } from "framer-motion";
 
