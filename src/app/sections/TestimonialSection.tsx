@@ -41,11 +41,11 @@ const TESTIMONIALS = [
 ];
 
 const SHAPES = [
-  "/testimony-shape1.svg",
-  "/testimony-shape2.svg",
-  "/testimony-shape3.svg",
-  "/testimony-shape4.svg",
-  "/testimony-shape5.svg",
+  "/marquee-images/1.png",
+  "/marquee-images/2.png",
+  "/marquee-images/3.png",
+  "/marquee-images/4.png",
+  "/marquee-images/ice.png",
 ];
 
 const LOOP = [...TESTIMONIALS, ...TESTIMONIALS];

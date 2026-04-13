@@ -11,7 +11,7 @@ import TestimonialSection from "./TestimonialSection";
 const SLIDES = [
   {
     id: 3,
-    image: "orange-wrapper.jpeg",
+    image: "wrappers/orange-wrapper.jpeg",
     tagline: "Zesty. Juicy. Classic.",
     heading: "Nagpur Orange\nreimagined",
     bg: "#FF8F00",
@@ -19,7 +19,7 @@ const SLIDES = [
   },
   {
     id: 1,
-    image: "jeera-wrapper.jpeg",
+    image: "wrappers/jeera-wrapper.jpeg",
     tagline: "Bold. Spiced. Desi.",
     heading: "Amritsari Jeera\nwith a punch",
     bg: "#5D4037",
@@ -27,7 +27,7 @@ const SLIDES = [
   },
   {
     id: 2,
-    image: "kokam-wrapper.jpeg",
+    image: "wrappers/kokam-wrapper.jpeg",
     tagline: "Tangy. Coastal. Refreshing.",
     heading: "Konkani Kokam\nin every sip",
     bg: "#D32F2F",
@@ -36,7 +36,7 @@ const SLIDES = [
 
   {
     id: 4,
-    image: "guoa-wrapper.jpeg",
+    image: "wrappers/guoa-wrapper.jpeg",
     tagline: "Sweet. Tropical. Nostalgic.",
     heading: "Guava\nlike never before",
     bg: "#EC407A",
@@ -44,7 +44,7 @@ const SLIDES = [
   },
   {
     id: 5,
-    image: "cola-wrapper.jpeg",
+    image: "wrappers/cola-wrapper.jpeg",
     tagline: "Smooth. Classic. Timeless.",
     heading: "IND Cola\nwith roots",
     bg: "#263238",
@@ -186,10 +186,10 @@ const HeroSection = () => {
             <div
               className="flex-1 flex items-center justify-center relative h-[600px] w-full overflow-hidden"
               style={{
-                maskImage: "url(./bottle-mask.png)",
+                maskImage: "url(./masks/bottle-mask.png)",
                 maskPosition: "center",
                 maskRepeat: "no-repeat",
-                backgroundImage: "url(./bottle.png)",
+                backgroundImage: "url(./masks/bottle.png)",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 maskSize: "20rem",
