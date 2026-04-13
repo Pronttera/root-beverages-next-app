@@ -102,7 +102,7 @@ const HeroSection = () => {
           {/* Background colour layer */}
           <div className="absolute inset-0 z-0" />
 
-          <div className="relative z-10 w-full max-w-[1900px] mx-auto px-8 md:px-16  flex flex-col-reverse md:flex-row-reverse md:items-center md:gap-12 py-12 md:py-0">
+          <div className="mt-[-9rem] md:mt-0 relative z-10 w-full max-w-[1900px] mx-auto px-8 md:px-16  flex flex-col-reverse md:flex-row-reverse md:items-center md:gap-12 py-12 md:py-0">
             {/* Text */}
             <div className="flex-1 md:flex flex-col-reverse justify-center md:justify-start md:flex-col gap-4 md:gap-6 mt-[-10rem]">
               <AnimatePresence mode="wait">
