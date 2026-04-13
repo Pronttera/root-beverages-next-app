@@ -98,11 +98,11 @@ const HeroSection = () => {
         transition={{ duration: 0.5 }}
         id="hero"
       >
-        <div className="flex items-center overflow-hidden mt-[-6rem] md:mt-0">
+        <div className="flex items-center mt-0 md:mt-14">
           {/* Background colour layer */}
           <div className="absolute inset-0 z-0" />
 
-          <div className="relative z-10 w-full max-w-[1900px] mx-auto px-8 md:px-16  flex flex-col-reverse md:flex-row md:items-center md:gap-12 py-12 md:py-0">
+          <div className="relative z-10 w-full max-w-[1900px] mx-auto px-8 md:px-16  flex flex-col-reverse md:flex-row-reverse md:items-center md:gap-12 py-12 md:py-0">
             {/* Text */}
             <div className="flex-1 md:flex flex-col-reverse justify-center md:justify-start md:flex-col gap-4 md:gap-6 mt-[-10rem]">
               <AnimatePresence mode="wait">
@@ -122,6 +122,7 @@ const HeroSection = () => {
                   </Typography>
                   <Typography
                     variant="h1"
+                    className="!text-6xl"
                     style={{
                       //   fontWeight: 900,
                       //   fontSize: "clamp(48px, 7vw, 100px)",
@@ -140,7 +141,7 @@ const HeroSection = () => {
               </AnimatePresence>
 
               {/* Nav Buttons */}
-              <div className="flex items-center justify-center gap-6 mt-6">
+              <div className="flex items-center md:justify-start justify-center gap-6 mt-6">
                 <NavButton
                   onClick={() => paginate(-1)}
                   bg={slide.textColor === "white" ? "white" : "black"}
@@ -194,7 +195,7 @@ const HeroSection = () => {
                 backgroundRepeat: "no-repeat",
                 maskSize: "20rem",
                 backgroundSize: "20rem",
-                scale: isMobile ? 0.6 : 1.2,
+                scale: isMobile ? 0.6 : 1.6,
               }}
             >
               <motion.div
@@ -228,7 +229,7 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <Container className="mt-4 mb-8 md:mb-0 md:mt-12 flex flex-col md:flex-row justify-center gap-4 md:gap-18">
+        <Container className="mt-4 mb-8 md:mb-0 md:mt-28 flex flex-col md:flex-row justify-center gap-4 md:gap-18">
           <FlowerButton
             textColor="#E23375"
             bg="white"

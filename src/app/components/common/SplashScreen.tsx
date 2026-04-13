@@ -1,4 +1,4 @@
- "use client";
+"use client";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -28,17 +28,16 @@ export default function SplashScreen() {
         >
           {/* CENTER GROUP */}
           <div className="relative flex items-center justify-center">
-
             {/*  CENTER GIF */}
             <img
-              src="/micha-preloader-gif-500.webp"
+              src="/marquee-images/ice.png"
               alt="loading"
               className="w-[180px] md:w-[210px] relative z-10"
             />
 
             {/* LEFT LEAF */}
             <motion.img
-              src="/preloader-left.svg"
+              src="/marquee-images/ice.png"
               alt="left"
               className="absolute right-full mr-[-20px] w-[80px] md:w-[140px]"
               animate={{
@@ -54,7 +53,7 @@ export default function SplashScreen() {
 
             {/*  RIGHT LEAF */}
             <motion.img
-              src="/preloader-right.svg"
+              src="/marquee-images/ice.png"
               alt="right"
               className="absolute left-full ml-[-20px] w-[80px] md:w-[130px]"
               animate={{
@@ -68,7 +67,6 @@ export default function SplashScreen() {
                 delay: 0.3,
               }}
             />
-
           </div>
         </motion.div>
       )}
