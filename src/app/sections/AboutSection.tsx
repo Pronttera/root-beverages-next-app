@@ -13,7 +13,7 @@ const AboutSection = () => {
       title: "What is\nRoot?",
       description:
         "Root Beverages is a celebration of India’s most loved flavours, reimagined as refreshing, fizzy drinks. From the streets of Amritsar to the coasts of Konkan, we’ve bottled the tastes you grew up loving, now with a modern twist.",
-      image: "/images/what-is-root.png",
+      image: "/about-images/1.png",
       backgroundColor: "#FF8F00", // orange
       textColor: "white",
       position: "left",
@@ -23,7 +23,7 @@ const AboutSection = () => {
       title: "Why Choose\nRoot?",
       description:
         "We didn’t invent new flavours, we perfected the ones India already loves. Made with high-quality ingredients, RO-treated water, and zero shortcuts, every bottle delivers authentic taste with consistent quality you can trust.",
-      image: "/images/why-root.png",
+      image: "/about-images/2.png",
       backgroundColor: "#FDD835", // yellow
       textColor: "black",
       position: "right",
@@ -33,7 +33,7 @@ const AboutSection = () => {
       title: "When to\nEnjoy Root?",
       description:
         "Anytime is the right time. Whether it's a hot afternoon, a meal with friends, or a quick refresh break, Root fits every moment. Crack open a bottle and bring back the joy of real Indian flavours.",
-      image: "/images/when-root.png",
+      image: "/about-images/3.png",
       backgroundColor: "#43A047", // green
       textColor: "white",
       position: "left",
@@ -131,7 +131,7 @@ const MobileAboutCard = ({ item, index }: { item: any; index: number }) => {
             maskRepeat: "no-repeat",
             WebkitMaskPosition: "center",
             maskPosition: "center",
-            backgroundImage: `url('${item.image}'), url('https://t4.ftcdn.net/jpg/09/10/09/75/360_F_910097561_8uUqHdglYYAPZQKWeH6VGJHHrST4u3OI.jpg')`,
+            backgroundImage: `url('${item.image}')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -195,7 +195,7 @@ const DesktopAboutCard = ({ item, index }: { item: any; index: number }) => {
           maskRepeat: "no-repeat",
           WebkitMaskPosition: "center",
           maskPosition: "center",
-          backgroundImage: `url('https://t4.ftcdn.net/jpg/09/10/09/75/360_F_910097561_8uUqHdglYYAPZQKWeH6VGJHHrST4u3OI.jpg')`,
+          backgroundImage: `url('${item.image}')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

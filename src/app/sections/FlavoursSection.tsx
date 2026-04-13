@@ -19,12 +19,20 @@ interface FlavorCard {
 
 const FLAVOURS: FlavorCard[] = [
   {
+    id: 3,
+    name: "Nagpur Orange",
+    ingredients: "Zesty orange burst with citrus fizz",
+    bgColor: "#FF8F00",
+    textColor: "#ffffff",
+    image: "/flavours/orange.png",
+  },
+  {
     id: 1,
     name: "Amritsari Jeera",
     ingredients: "Spiced cumin blend with fizzy refreshment",
     bgColor: "#5D4037",
     textColor: "#ffffff",
-    image: "/jeera.png",
+    image: "/flavours/jeera.png",
   },
   {
     id: 2,
@@ -32,23 +40,7 @@ const FLAVOURS: FlavorCard[] = [
     ingredients: "Tangy kokam with a coastal twist",
     bgColor: "#D32F2F",
     textColor: "#ffffff",
-    image: "/kokam.png",
-  },
-  {
-    id: 3,
-    name: "Nagpur Orange",
-    ingredients: "Zesty orange burst with citrus fizz",
-    bgColor: "#FF8F00",
-    textColor: "#ffffff",
-    image: "/orange.png",
-  },
-  {
-    id: 4,
-    name: "Allahabadi Guava",
-    ingredients: "Sweet guava with tropical notes",
-    bgColor: "#EC407A",
-    textColor: "#ffffff",
-    image: "/guava.png",
+    image: "/flavours/kokam.png",
   },
   {
     id: 5,
@@ -56,7 +48,15 @@ const FLAVOURS: FlavorCard[] = [
     ingredients: "Classic cola with a desi touch",
     bgColor: "#263238",
     textColor: "#ffffff",
-    image: "/cola.png",
+    image: "/flavours/cola.png",
+  },
+  {
+    id: 4,
+    name: "Allahabadi Guava",
+    ingredients: "Sweet guava with tropical notes",
+    bgColor: "#EC407A",
+    textColor: "#ffffff",
+    image: "/flavours/guava.png",
   },
 ];
 export default function FlavoursSection() {
@@ -171,7 +171,7 @@ export default function FlavoursSection() {
                   }}
                 >
                   {/* Image */}
-                  <div className="flex-[2.5] flex items-center justify-center pt-12 md:pt-16 px-8 pb-2">
+                  <div className="flex-[2.5] flex items-center justify-center pb-2">
                     <img
                       src={card.image}
                       alt={card.name}
