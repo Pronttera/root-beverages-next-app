@@ -122,7 +122,7 @@ const HeroSection = () => {
                   </Typography>
                   <Typography
                     variant="h1"
-                    className="!text-6xl"
+                    className="md:!text-6xl"
                     style={{
                       //   fontWeight: 900,
                       //   fontSize: "clamp(48px, 7vw, 100px)",
