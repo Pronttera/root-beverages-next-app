@@ -81,9 +81,30 @@ export default function Footer() {
             >
               Collaborate
             </li>
-            <li className="hover:text-red-500 cursor-pointer">Instagram</li>
-            <li className="hover:text-red-500 cursor-pointer">LinkedIn</li>
-            <li className="hover:text-red-500 cursor-pointer">Facebook</li>
+            <li className="hover:text-red-500 cursor-pointer">
+              <a
+                href="https://www.instagram.com/rootbeverages/"
+                target="_instagram"
+              >
+                Instagram
+              </a>
+            </li>
+            <li className="hover:text-red-500 cursor-pointer">
+              <a
+                href="https://www.facebook.com/profile.php?id=61583668177738"
+                target="_linkedin"
+              >
+                LinkedIn
+              </a>
+            </li>
+            <li className="hover:text-red-500 cursor-pointer">
+              <a
+                href="https://www.facebook.com/profile.php?id=61583668177738"
+                target="_facebook"
+              >
+                Facebook
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -166,9 +187,30 @@ export default function Footer() {
               >
                 Collaborate
               </li>
-              <li className="hover:text-red-500 cursor-pointer">Instagram</li>
-              <li className="hover:text-red-500 cursor-pointer">LinkedIn</li>
-              <li className="hover:text-red-500 cursor-pointer">Facebook</li>
+              <li className="hover:text-red-500 cursor-pointer">
+                <a
+                  href="https://www.instagram.com/rootbeverages/"
+                  target="_instagram"
+                >
+                  Instagram
+                </a>
+              </li>
+              <li className="hover:text-red-500 cursor-pointer">
+                <a
+                  href="https://www.facebook.com/profile.php?id=61583668177738"
+                  target="_linkedin"
+                >
+                  LinkedIn
+                </a>
+              </li>
+              <li className="hover:text-red-500 cursor-pointer">
+                <a
+                  href="https://www.facebook.com/profile.php?id=61583668177738"
+                  target="_facebook"
+                >
+                  Facebook
+                </a>
+              </li>
             </ul>
           </div>
         </div>

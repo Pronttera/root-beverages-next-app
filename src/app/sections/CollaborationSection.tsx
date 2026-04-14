@@ -58,7 +58,7 @@ export default function CollaborationSection() {
     const city = capitalize(form.city);
     const country = capitalize(form.country);
 
-    const whatsappNumber = "91706660839";
+    const whatsappNumber = "9773555648";
 
     const text = `Hey, I'm ${form.name} and I'm interested in collaborating with Root Beverages! 
 
@@ -82,14 +82,14 @@ export default function CollaborationSection() {
 
   const contactItems = [
     {
-      text: "+91 84464028XX",
+      text: "+919773555648",
       icon: <Phone size={20} />,
-      link: "tel:+9184464028XX",
+      link: "tel:+919773555648",
     },
     {
-      text: "info@rootbeverages.asia",
+      text: "info@rootbeverages.in",
       icon: <Mail size={20} />,
-      link: "mailto:info@rootbeverages.asia",
+      link: "mailto:info@rootbeverages.in",
     },
     {
       text: "rootbeverages.asia",
@@ -154,7 +154,7 @@ export default function CollaborationSection() {
               {[
                 { name: "name", placeholder: "Name" },
                 { name: "email", placeholder: "Email" },
-                { name: "phone", placeholder: "+91XXXXXXXXXX" },
+                { name: "phone", placeholder: "+919773555648" },
                 { name: "city", placeholder: "City" },
                 { name: "country", placeholder: "Country" },
               ].map((field) => (

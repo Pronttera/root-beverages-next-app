@@ -229,26 +229,31 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <Container className="mt-4 mb-8 md:mb-0 md:mt-28 flex flex-col md:flex-row justify-center gap-4 md:gap-18">
-          <FlowerButton
-            textColor="#E23375"
-            bg="white"
-            label="Order from Zepto"
-            startAdornment={{ type: "src", src: "/zepto-icon.png" }}
-          />
-          <FlowerButton
-            bg="white"
-            textColor="#FC8019"
-            label="Order from Instamart"
-            startAdornment={{ type: "src", src: "/swiggy-icon.svg" }}
-          />
-          <FlowerButton
-            bg="#F8C519"
-            textColor="black"
-            label="Order from Blinkit"
-            startAdornment={{ type: "src", src: "/blinkit-icon.svg" }}
-          />
-        </Container>
+        <div id="stores">
+          <Container className="mt-4 mb-8 md:mb-0 md:mt-28 flex flex-col md:flex-row justify-center gap-4 md:gap-18">
+            <FlowerButton
+              textColor="#E23375"
+              bg="white"
+              label="Order from Zepto"
+              startAdornment={{ type: "src", src: "/zepto-icon.png" }}
+              onClick={() => alert("Stay thirsty… we’re coming soon.")}
+            />
+            <FlowerButton
+              bg="white"
+              textColor="#FC8019"
+              label="Order from Instamart"
+              startAdornment={{ type: "src", src: "/swiggy-icon.svg" }}
+              onClick={() => alert("Stay thirsty… we’re coming soon.")}
+            />
+            <FlowerButton
+              bg="#F8C519"
+              textColor="black"
+              label="Order from Blinkit"
+              startAdornment={{ type: "src", src: "/blinkit-icon.svg" }}
+              onClick={() => alert("Stay thirsty… we’re coming soon.")}
+            />
+          </Container>
+        </div>
         <div className="mt-[-60rem]- md:mt-[-41rem]- absolute top-4 md:bottom-1/4">
           <TestimonialSection hideCard />
         </div>

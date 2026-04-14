@@ -331,10 +331,7 @@ export default function FlavoursSection() {
             textColor="#E23375"
             bg="white"
             className="mt-4 md:mt-12"
-            onClick={() => {
-              const el = document.getElementById("contact");
-              el?.scrollIntoView({ behavior: "smooth" });
-            }}
+            onClick={() => alert("Stay thirsty… we’re coming soon.")}
           />
         </div>
       </Container>
