@@ -107,7 +107,7 @@ export default function TestimonialSection({ hideCard = false }: any) {
                 {/* SVG */}
                 <img
                   src={SHAPES[i % SHAPES.length]}
-                  className="w-38 h-38 md:w-60 md:h-60 mt-4"
+                  className="w-38 h-38 md:w-80 md:h-80 mt-4"
                 />
               </div>
             );
