@@ -28,115 +28,159 @@ export default function PrivacyPolicy() {
             Last updated: 09/04/2026
           </Typography>
 
-          <Typography variant="body">
-            Welcome to Root Beverages ("we", "us", or "our"). We value your
-            privacy and are committed to protecting your personal data in
-            accordance with applicable data protection laws. This Privacy Policy
-            explains how we collect, use, disclose, and safeguard your personal
-            data when you interact with our website https://rootbeverages.asia
-            ("Website"). By using our Website, you agree to the terms of this
-            Policy.
+          <Typography variant="body" className="mb-4">
+            We know that you care how information about you is used and shared,
+            and we appreciate your trust that we will do so carefully and
+            sensibly. This Privacy Notice describes how Root Beverages Co. and
+            its affiliates, collect and process your personal information
+            through its website and online marketplace that reference this
+            Privacy Notice.
           </Typography>
 
-          <Typography variant="title" className="font-black mt-8">
-            1. Collection of Personal Data
+          <Typography variant="body" className="mb-4">
+            By using Root Beverages Co. you agree to our use of your personal
+            information (including sensitive personal information) by this
+            Privacy Notice, as may be amended from time to time by us at our
+            discretion. You also agree and consent to us collecting, storing,
+            processing, transferring, and sharing your personal information
+            (including sensitive personal information) with third parties or
+            service providers for the purposes set out in this Privacy Notice.
           </Typography>
-          <Typography variant="body">
-            We collect personal data that you voluntarily provide to us or that
-            is automatically collected through your interaction with the
-            Website. This may include:
+
+          <Typography variant="body" className="mb-4">
+            Personal information subject to this Privacy Notice will be
+            collected and retained by Root Beverages Co. with a registered
+            office at. plot no. ATC-31, Covered Second Floor, TTC,INDL AREA,
+            MIDC, Mahape, Navi Mumbai - 400710.
           </Typography>
-          <ul className="list-disc pl-6 space-y-1 mb-6 text-base">
-            <li>
-              <strong>1.1 Information You Provide</strong> — Your name, email
-              address, phone number, and other contact details when you submit
-              an enquiry or collaboration form.
-            </li>
-            <li>
-              <strong>1.2 Information Collected Automatically</strong> — Device
-              type, browser, IP address, pages visited, and referring URLs
-              collected via cookies or similar technologies.
-            </li>
+
+          <Typography variant="title" className="font-black mt-8 mb-2">
+            What Personal Information About Customers Does Root Beverages Co.
+            Collect?
+          </Typography>
+          <Typography variant="body" className="mb-4">
+            We collect your personal information to provide and continually
+            improve our products and services.
+          </Typography>
+
+          <Typography variant="title" className="font-bold mt-4 mb-2">
+            Information You Give Us:
+          </Typography>
+          <Typography variant="body" className="mb-4">
+            We receive and store any information you provide in relation to Root
+            Beverages Co.. You can choose not to provide certain information,
+            but then you might not be able to take advantage of Root Beverages
+            Co.
+          </Typography>
+
+          <Typography variant="title" className="font-bold mt-4 mb-2">
+            Automatic Information:
+          </Typography>
+          <Typography variant="body" className="mb-4">
+            We automatically collect and store certain types of information
+            about your use of Root Beverages Co.. Like many websites, we use
+            cookies and other unique identifiers, and we obtain certain types of
+            information when your web browser or device accesses Services and
+            other content served by or on behalf of Root Beverages Co. on other
+            websites.
+          </Typography>
+
+          <Typography variant="title" className="font-bold mt-4 mb-2">
+            Information from Other Sources:
+          </Typography>
+          <Typography variant="body" className="mb-4">
+            We might receive information about you from other sources, such as
+            updated delivery and address information from our carriers, which we
+            use to correct our records and deliver your next purchase more
+            easily.
+          </Typography>
+
+          <Typography variant="title" className="font-black mt-8 mb-2">
+            For What Purposes Does Root Beverages Co. Use Your Personal
+            Information?
+          </Typography>
+          <ul className="list-disc pl-6 space-y-1 mb-6 text-base text-gray-600">
+            <li>Purchase and delivery of products and services</li>
+            <li>Provide, troubleshoot, and improve Services</li>
+            <li>Personalization of content and recommendations</li>
+            <li>Compliance with legal obligations</li>
+            <li>Communication via phone, email, or chat</li>
+            <li>Advertising and promotional offers</li>
+            <li>Fraud prevention and credit risk management</li>
           </ul>
 
-          <Typography variant="title" className="font-black mt-8">
-            2. Use of Personal Data
+          <Typography variant="title" className="font-black mt-8 mb-2">
+            What About Cookies and Other Identifiers?
           </Typography>
-          <Typography variant="body">We use your personal data to:</Typography>
-          <ul className="list-disc pl-6 space-y-1 mb-6 text-base">
-            <li>Respond to your enquiries and collaboration requests.</li>
-            <li>Improve and personalise your experience on the Website.</li>
-            <li>
-              Send promotional or informational communications (with your
-              consent).
-            </li>
-            <li>Comply with legal obligations.</li>
+          <Typography variant="body" className="mb-4">
+            To enable our systems to recognize your browser or device and to
+            provide and improve Root Beverages Co. services, we use cookies and
+            other identifiers.
+          </Typography>
+
+          <Typography variant="title" className="font-black mt-8 mb-2">
+            Does Root Beverages Co. Share Your Personal Information?
+          </Typography>
+          <Typography variant="body" className="mb-4">
+            We do not sell our customers’ personal information to others. We
+            share personal information only as described below:
+          </Typography>
+
+          <Typography variant="title" className="font-bold mt-4 mb-2">
+            Third-Party Service Providers:
+          </Typography>
+          <Typography variant="body" className="mb-4">
+            We employ other companies and individuals to perform functions on
+            our behalf such as order fulfillment, package delivery, email
+            services, analytics, marketing assistance, and customer service.
+          </Typography>
+
+          <Typography variant="title" className="font-bold mt-4 mb-2">
+            Business Transfers:
+          </Typography>
+          <Typography variant="body" className="mb-4">
+            If we sell or buy businesses, customer information is generally one
+            of the transferred business assets. In such cases, your data remains
+            subject to the promises made in this policy unless otherwise agreed.
+          </Typography>
+
+          <Typography variant="title" className="font-black mt-8 mb-4">
+            Examples of Information Collected
+          </Typography>
+
+          <Typography variant="title" className="font-bold mt-4 mb-2">
+            Information You Give Us:
+          </Typography>
+          <ul className="list-disc pl-6 space-y-1 mb-6 text-base text-gray-600">
+            <li>Name, address, and phone numbers</li>
+            <li>Payment information</li>
+            <li>Age and location</li>
+            <li>IP address</li>
+            <li>Profile information including photo</li>
+            <li>Identity and address proof including PAN</li>
+            <li>Credit history</li>
           </ul>
 
-          <Typography variant="title" className="font-black mt-8">
-            3. Disclosure of Personal Data
+          <Typography variant="title" className="font-bold mt-4 mb-2">
+            Automatic Information:
           </Typography>
-          <Typography variant="body">
-            We do not sell or rent your personal data. We may share it with
-            trusted third-party service providers who assist us in operating our
-            Website, subject to confidentiality obligations. We may also
-            disclose data if required by law or to protect our rights.
-          </Typography>
+          <ul className="list-disc pl-6 space-y-1 mb-6 text-base text-gray-600">
+            <li>Login credentials</li>
+            <li>Device and OS information</li>
+            <li>Browsing and content usage history</li>
+            <li>Clickstream, page interaction, and performance data</li>
+            <li>Cookies and device identifiers</li>
+          </ul>
 
-          <Typography variant="title" className="font-black mt-8">
-            4. Retention of Data
+          <Typography variant="title" className="font-bold mt-4 mb-2">
+            Information from Other Sources:
           </Typography>
-          <Typography variant="body">
-            We retain personal data only as long as necessary for the purposes
-            it was collected or as required by law.
-          </Typography>
-
-          <Typography variant="title" className="font-black mt-8">
-            5. Your Rights
-          </Typography>
-          <Typography variant="body">
-            You have the right to access, correct, or request deletion of your
-            personal data. To exercise these rights, contact us at{" "}
-            <a
-              href="mailto:info@rootbeverages.asia"
-              className="text-red-500 hover:underline"
-            >
-              info@rootbeverages.asia
-            </a>
-            .
-          </Typography>
-
-          <Typography variant="title" className="font-black mt-8">
-            6. Cookies
-          </Typography>
-          <Typography variant="body">
-            Our Website uses cookies to enhance user experience. You may disable
-            cookies through your browser settings, though some features may not
-            function properly as a result.
-          </Typography>
-
-          <Typography variant="title" className="font-black mt-8">
-            7. Changes to This Policy
-          </Typography>
-          <Typography variant="body">
-            We may update this Privacy Policy from time to time. Changes will be
-            posted on this page with an updated effective date. Continued use of
-            the Website constitutes acceptance of the updated Policy.
-          </Typography>
-
-          <Typography variant="title" className="font-black mt-8">
-            8. Contact Us
-          </Typography>
-          <Typography variant="body">
-            For any privacy-related concerns, please contact us at{" "}
-            <a
-              href="mailto:info@rootbeverages.asia"
-              className="text-red-500 hover:underline"
-            >
-              info@rootbeverages.asia
-            </a>
-            .
-          </Typography>
+          <ul className="list-disc pl-6 space-y-1 mb-6 text-base text-gray-600">
+            <li>Updated delivery/address details from carriers</li>
+            <li>Account and redemption info from co-branded partners</li>
+            <li>Interaction data with affiliate services</li>
+            <li>Search results and links including sponsored ads</li>
+          </ul>
         </div>
       </Section>
 
