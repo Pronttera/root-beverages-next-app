@@ -49,7 +49,7 @@ export default function Footer() {
               className="hover:text-red-500 cursor-pointer"
               onClick={() => scrollTo("#about-roots")}
             >
-              About Roots
+              About Root
             </li>
             <li
               className="hover:text-red-500 cursor-pointer"
@@ -153,7 +153,7 @@ export default function Footer() {
                 className="hover:text-red-500 cursor-pointer"
                 onClick={() => scrollTo("#about-roots")}
               >
-                About Roots
+                About Root
               </li>
               <li
                 className="hover:text-red-500 cursor-pointer"

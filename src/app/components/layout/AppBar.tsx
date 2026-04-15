@@ -22,7 +22,7 @@ const AppBar: React.FC<AppBarProps> = ({
   brandImageAlt = "Brand Logo",
   navLinks = [
     { label: "Home", href: "/" },
-    { label: "About Roots", href: "#about-roots" },
+    { label: "About Root", href: "#about-roots" },
     { label: "Our Flavours", href: "#our-flavours" },
     { label: "Why Us", href: "#why-us" },
     { label: "Let's Collaborate", href: "#lets-collaborate" },
@@ -109,13 +109,10 @@ const AppBar: React.FC<AppBarProps> = ({
               className="flex items-center gap-2 cursor-pointer"
               onClick={() => handler("/")}
             >
-              <Image
+              <img
                 src="/root-beverages-logo.png"
                 alt="Root Beverages"
-                width={160}
-                height={60}
-                className="h-8 md:h-15 w-auto object-contain"
-                priority
+                className="h-8 md:h-22 w-auto object-contain"
               />
               <p className="text-white text-base md:text-3xl font-bold">
                 Root Beverages

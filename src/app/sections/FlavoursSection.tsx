@@ -99,7 +99,7 @@ export default function FlavoursSection() {
     <Section
       disableContainer
       className="!px-0 !py-0 overflow-hidden"
-      style={{ backgroundColor: "#7E3FA0" }}
+      style={{ backgroundColor: "#0060d1" }}
       id="our-flavours"
     >
       {/* ── Scalloped top edge ── */}

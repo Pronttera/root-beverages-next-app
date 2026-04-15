@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Poppins, Berkshire_Swash } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Poppins,
+  Berkshire_Swash,
+  Frijole,
+  Slackey,
+} from "next/font/google";
 import "./globals.scss";
 
 const geistSans = Geist({
@@ -18,7 +25,7 @@ const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-const berkshire = Berkshire_Swash({
+const berkshire = Slackey({
   variable: "--font-berkshire",
   subsets: ["latin"],
   weight: "400",
@@ -35,7 +42,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${berkshire.variable}`}>
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${berkshire.variable}`}
+    >
       <body>{children}</body>
     </html>
   );
