@@ -16,6 +16,7 @@ const SLIDES = [
     heading: "Nagpur Orange\nreimagined",
     bg: "#FF8F00",
     textColor: "white",
+    bottle: "bottles/orange.png",
   },
   {
     id: 1,
@@ -24,6 +25,7 @@ const SLIDES = [
     heading: "Amritsari Jeera\nwith a punch",
     bg: "#5D4037",
     textColor: "white",
+    bottle: "bottles/jira.png",
   },
   {
     id: 2,
@@ -32,6 +34,7 @@ const SLIDES = [
     heading: "Konkani Kokam\nin every sip",
     bg: "#D32F2F",
     textColor: "white",
+    bottle: "bottles/kokam.png",
   },
 
   {
@@ -41,6 +44,7 @@ const SLIDES = [
     heading: "Guava\nlike never before",
     bg: "#EC407A",
     textColor: "white",
+    bottle: "bottles/guava.png",
   },
   {
     id: 5,
@@ -49,6 +53,7 @@ const SLIDES = [
     heading: "IND Cola\nwith roots",
     bg: "#263238",
     textColor: "white",
+    bottle: "bottles/cola.png",
   },
 ];
 
@@ -190,12 +195,13 @@ const HeroSection = () => {
                 maskImage: "url(./masks/bottle-mask.png)",
                 maskPosition: "center",
                 maskRepeat: "no-repeat",
-                backgroundImage: "url(./masks/bottle.png)",
+                backgroundImage: `url(${slide.bottle})`,
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 maskSize: "20rem",
                 backgroundSize: "20rem",
                 scale: isMobile ? 0.6 : 1.6,
+                transition: "1s",
               }}
             >
               <motion.div
@@ -203,7 +209,7 @@ const HeroSection = () => {
                 style={{
                   width: 400,
                   marginTop: 80,
-                  mixBlendMode: "multiply",
+                  mixBlendMode: "hard-light",
                 }}
                 animate={{ x: -(activeIndex * 400) }}
                 transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1] }}

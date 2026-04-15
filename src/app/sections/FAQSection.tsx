@@ -12,7 +12,7 @@ const FAQ_DATA = [
     id: 1,
     question: "What is Root Beverages?",
     answer:
-      "Root Beverages is a proudly Indian carbonated drink brand that brings back the flavours you’ve grown up loving. From Amritsari Jeera to Konkani Kokam, we bottle authentic regional tastes with a refreshing fizzy twist.",
+      "Root Beverages Co. is our love letter to desi flavours. We are a proudly Indian carbonated beverage brand committed to redefining refreshment by reconnecting everyone with the country’s rich flavor heritage.",
     activeBg: "#FF8F00", // Orange (Nagpur Orange)
     inactiveBg: "#FBEF43",
     questionColor: "#FBEF43",
@@ -21,9 +21,9 @@ const FAQ_DATA = [
   },
   {
     id: 2,
-    question: "What is actually inside the bottle?",
+    question: "What makes Root Beverages different from other brands?",
     answer:
-      "Each bottle is crafted using high-quality ingredients, RO-treated water, and carefully balanced flavour blends to deliver a clean, refreshing, and consistent taste in every sip.",
+      "Root Beverages stands out because it doesn’t try to be another “generic soda” it builds on familiar Indian taste memories and gives them a modern, cooler twist. Most beverages today play it safe with predictable tastes. We go the other way bringing back bold, desi flavours that people actually grew up loving. From match days to daily breaks, it’s built to feel familiar yet exciting. It is Made with RO Water, has No Sulfur, and undertakes Rigorous Quality Checks - We follow a strict multi-step quality control process. From ingredient selection to final packaging, every stage is monitored to ensure safety.",
     activeBg: "#5D4037", // Jeera
     inactiveBg: "#FBEF43",
     questionColor: "#FBEF43",
@@ -32,9 +32,9 @@ const FAQ_DATA = [
   },
   {
     id: 3,
-    question: "Do you offer wholesale pricing?",
+    question: "How do I become a distributor or a partner?",
     answer:
-      "Yes! We partner with retailers, cafes, and distributors across regions. Reach out through our collaborate section to explore bulk orders and wholesale opportunities.",
+      "We are always looking to expand the Root Beverages family! If you are interested in becoming a distributor or a strategic partner, simply fill out the inquiry on our website and our dedicated team will promptly review your submission and reach out to discuss potential collaborations.",
     activeBg: "#D32F2F", // Kokam
     inactiveBg: "#FBEF43",
     questionColor: "#FBEF43",
@@ -43,9 +43,10 @@ const FAQ_DATA = [
   },
   {
     id: 4,
-    question: "What makes Root different from others?",
+    question:
+      "I’m interested in selling Root Beverages, what is the next step?",
     answer:
-      "We didn’t reinvent flavours, we perfected them. Root focuses on authentic Indian taste, consistent quality, and modern packaging while staying true to regional favourites.",
+      "Nothing makes us happier than adding partners. Contact us through any medium of your choosing listed on our website, we will discuss and close on mutually agreed terms!",
     activeBg: "#EC407A", // Guava
     inactiveBg: "#FBEF43",
     questionColor: "#FBEF43",
@@ -54,9 +55,9 @@ const FAQ_DATA = [
   },
   {
     id: 5,
-    question: "How can I collaborate or become a distributor?",
+    question: "Can I sell Root Beverages in my store or cafe?",
     answer:
-      "Simply fill out the collaboration form on our website. Our team will review your details and get in touch with you shortly to take things forward.",
+      "Absolutely! Root beverages make an excellent addition to any retail store, cafe, or restaurant looking to offer their customers a refreshing taste of childhood. We encourage you to get in touch with us directly to discuss our wholesale programs, delivery options, and how Root Beverages can become a part of your SKU/Menu.",
     activeBg: "#263238", // Cola
     inactiveBg: "#FBEF43",
     questionColor: "#FBEF43",

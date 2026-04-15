@@ -10,9 +10,9 @@ const AboutSection = () => {
   const list = [
     {
       id: 1,
-      title: "What is\nRoot?",
+      title: "Made with\nRO Water",
       description:
-        "Root Beverages is a celebration of India’s most loved flavours, reimagined as refreshing, fizzy drinks. From the streets of Amritsar to the coasts of Konkan, we’ve bottled the tastes you grew up loving, now with a modern twist.",
+        "Experience pure clarity and refreshing taste, crafted using RO-treated water to ensure high-quality standards",
       image: "/about-images/1.png",
       backgroundColor: "#FF8F00", // orange
       textColor: "white",
@@ -20,9 +20,9 @@ const AboutSection = () => {
     },
     {
       id: 2,
-      title: "Why Choose\nRoot?",
+      title: "No\nSulfur",
       description:
-        "We didn’t invent new flavours, we perfected the ones India already loves. Made with high-quality ingredients, RO-treated water, and zero shortcuts, every bottle delivers authentic taste with consistent quality you can trust.",
+        "Experience sweetness of Root Beverages, crafted using sulfur-free sugar and free from artificial sweeteners",
       image: "/about-images/2.png",
       backgroundColor: "#FDD835", // yellow
       textColor: "black",
@@ -30,13 +30,23 @@ const AboutSection = () => {
     },
     {
       id: 3,
-      title: "When to\nEnjoy Root?",
+      title: "Supports Local\nCommunity",
       description:
-        "Anytime is the right time. Whether it's a hot afternoon, a meal with friends, or a quick refresh break, Root fits every moment. Crack open a bottle and bring back the joy of real Indian flavours.",
+        "We are committed to supporting local communities by generating employment opportunities",
       image: "/about-images/3.png",
       backgroundColor: "#43A047", // green
       textColor: "white",
       position: "left",
+    },
+    {
+      id: 4,
+      title: "Rigorous Quality\nChecks",
+      description:
+        "We follow strict multi-step quality control process. From ingredient selection to final packaging, every stage is monitored to ensure safety.",
+      image: "/about-images/1.png",
+      backgroundColor: "#D32F2F", // red/kokam
+      textColor: "white",
+      position: "right",
     },
   ];
   return (

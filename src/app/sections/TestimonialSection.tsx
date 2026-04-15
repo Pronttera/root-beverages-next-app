@@ -5,38 +5,40 @@ import Typography from "../components/common/Typography";
 
 const TESTIMONIALS = [
   {
-    quote: "So refreshing I forgot it's actually good for me. Thanks Root!",
-    author: "Juliana Kim",
+    quote: "Perfect drink to pair with snacks. Cold, fizzy, and actually satisfying",
+    author: "Sneha Patel",
     bg: "#B0003A",
     text: "#fff",
   },
   {
-    quote:
-      "Tastes amazing and my gut is basically doing backflips. Root is a game-changer!",
-    author: "Ravi Malhotra",
+    quote: "I didn't expect it to be this good. Feels desi but still new somehow.",
+    author: "Karan Malhotra",
     bg: "#F472B6",
     text: "#fff",
   },
   {
-    quote:
-      "I didn't expect my stomach to smile, but here we are. Root is my new happy place in a bottle.",
-    author: "Tina Lawrence",
+    quote: "Light, fizzy, and actually refreshing. You can tell it’s made with thought.",
+    author: "Ananya Iyer",
     bg: "#2E8B57",
     text: "#fff",
   },
   {
-    quote:
-      "My digestive system says a big thank you. Root is like a party for my gut, and everyone's invited!",
-    author: "Liam Sutherland",
+    quote: "I tried it once and now I keep stocking it at home. Guava is my favourite!",
+    author: "Priya Nair",
     bg: "#8B0000",
     text: "#fff",
   },
   {
-    quote:
-      "Every sip is like a fizzy high five to my gut. Root is the best thing I've done for my digestion in ages!",
-    author: "Benita Tan",
+    quote: "Reminds me of those childhood summer drinks, but way more refreshing.",
+    author: "Arhaan Shaikh",
     bg: "#DCE34F",
     text: "#1a1a1a",
+  },
+  {
+    quote: "Proper desi flavours done right. Feel like having it again and again",
+    author: "Vikram Singh",
+    bg: "#FF8F00",
+    text: "#fff",
   },
 ];
 
