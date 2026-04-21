@@ -33,14 +33,14 @@ const AboutSection = () => {
       title: "Supports Local\nCommunity",
       description:
         "We are committed to supporting local communities by generating employment opportunities",
-      image: "/about-images/3.png",
+      image: "team.png",
       backgroundColor: "#43A047", // green
       textColor: "white",
       position: "left",
     },
     {
       id: 4,
-      title: "Rigorous Quality\nChecks",
+      title: "FSSAI Standard\nHygiene",
       description:
         "We follow strict multi-step quality control process. From ingredient selection to final packaging, every stage is monitored to ensure safety.",
       image: "/about-images/1.png",
@@ -100,13 +100,32 @@ const MobileAboutCard = ({ item, index }: { item: any; index: number }) => {
         backgroundRepeat: "no-repeat",
       }}
     >
+      {/* Image block with flower mask + bottom padding so it doesn't clip */}
+      <div className="w-full px-4 pb-16 pt-2">
+        <div
+          className="w-full h-56"
+          style={{
+            WebkitMaskImage: "url(/flower-mask.svg)",
+            maskImage: "url(/flower-mask.svg)",
+            WebkitMaskSize: "contain",
+            maskSize: "contain",
+            WebkitMaskRepeat: "no-repeat",
+            maskRepeat: "no-repeat",
+            WebkitMaskPosition: "center",
+            maskPosition: "center",
+            backgroundImage: `url('${item.image}')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+      </div>
       {/* Text block */}
       <div className="flex flex-col gap-3 px-6 pt-16 pb-4">
         <Typography
           variant="h2"
           style={{
             WebkitTextFillColor: "white",
-            WebkitTextStrokeWidth: "0.04em",
+            WebkitTextStrokeWidth: "0.08em",
             WebkitTextStrokeColor: "black",
             paintOrder: "stroke fill",
             whiteSpace: "pre-line",
@@ -126,26 +145,6 @@ const MobileAboutCard = ({ item, index }: { item: any; index: number }) => {
         >
           {item.description}
         </Typography>
-      </div>
-
-      {/* Image block with flower mask + bottom padding so it doesn't clip */}
-      <div className="w-full px-4 pb-16 pt-2">
-        <div
-          className="w-full h-56"
-          style={{
-            WebkitMaskImage: "url(/flower-mask.svg)",
-            maskImage: "url(/flower-mask.svg)",
-            WebkitMaskSize: "contain",
-            maskSize: "contain",
-            WebkitMaskRepeat: "no-repeat",
-            maskRepeat: "no-repeat",
-            WebkitMaskPosition: "center",
-            maskPosition: "center",
-            backgroundImage: `url('${item.image}')`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
       </div>
     </div>
   );

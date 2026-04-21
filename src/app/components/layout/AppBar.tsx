@@ -24,7 +24,8 @@ const AppBar: React.FC<AppBarProps> = ({
     { label: "Home", href: "/" },
     { label: "About Root", href: "#about-roots" },
     { label: "Our Flavours", href: "#our-flavours" },
-    { label: "Why Us", href: "#why-us" },
+    { label: "Testimonials", href: "#testimonials" },
+    { label: "Our Story", href: "#our-story" },
     { label: "Let's Collaborate", href: "#lets-collaborate" },
   ],
 }) => {

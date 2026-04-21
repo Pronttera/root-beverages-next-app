@@ -59,9 +59,15 @@ export default function Footer() {
             </li>
             <li
               className="hover:text-red-500 cursor-pointer"
-              onClick={() => scrollTo("#why-us")}
+              onClick={() => scrollTo("#testimonials")}
             >
-              Why Us
+              Testimonials
+            </li>
+            <li
+              className="hover:text-red-500 cursor-pointer"
+              onClick={() => scrollTo("#our-story")}
+            >
+              Our Story
             </li>
             <li
               className="hover:text-red-500 cursor-pointer"
@@ -163,9 +169,15 @@ export default function Footer() {
               </li>
               <li
                 className="hover:text-red-500 cursor-pointer"
-                onClick={() => scrollTo("#why-us")}
+                onClick={() => scrollTo("#testimonials")}
               >
-                Why Us
+                Testimonials
+              </li>
+              <li
+                className="hover:text-red-500 cursor-pointer"
+                onClick={() => scrollTo("#our-story")}
+              >
+                Our Story
               </li>
               <li
                 className="hover:text-red-500 cursor-pointer"

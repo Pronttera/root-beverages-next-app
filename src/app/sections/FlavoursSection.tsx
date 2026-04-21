@@ -1,12 +1,18 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Section from "../components/common/Section";
 import Container from "../components/common/Container";
 import Typography from "../components/common/Typography";
-import Button from "../components/common/Button";
 import FlowerButton from "../components/common/FlowerButton";
-import { motion } from "framer-motion";
-import { MapPin } from "lucide-react";
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 interface FlavorCard {
   id: number;
@@ -59,42 +65,8 @@ const FLAVOURS: FlavorCard[] = [
     image: "/flavours/guava.png",
   },
 ];
+
 export default function FlavoursSection() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-  const total = FLAVOURS.length;
-
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 768);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
-
-  const VISIBLE = isMobile ? 1 : 3;
-  const canPrev = activeIndex > 0;
-  const canNext = activeIndex < total - VISIBLE;
-
-  const go = (dir: "prev" | "next") => {
-    if (isAnimating) return;
-    if (dir === "prev" && !canPrev) return;
-    if (dir === "next" && !canNext) return;
-    setIsAnimating(true);
-    setActiveIndex((i) => (dir === "next" ? i + 1 : i - 1));
-    setTimeout(() => setIsAnimating(false), 450);
-  };
-
-  useEffect(() => {
-    const handler = (e: KeyboardEvent) => {
-      if (e.key === "ArrowLeft") go("prev");
-      if (e.key === "ArrowRight") go("next");
-    };
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [activeIndex, isAnimating]);
-
   return (
     <Section
       disableContainer
@@ -102,6 +74,32 @@ export default function FlavoursSection() {
       style={{ backgroundColor: "#0060d1" }}
       id="our-flavours"
     >
+      <style>{`
+        .swiper-pagination-custom .swiper-pagination-bullet {
+          width: 8px;
+          height: 8px;
+          background: rgba(255, 255, 255, 0.4);
+          opacity: 1;
+          margin: 0 4px !important;
+          transition: all 0.3s ease;
+        }
+        .swiper-pagination-custom .swiper-pagination-bullet-active {
+          width: 24px;
+          border-radius: 6px;
+          background: white;
+        }
+        .swiper-button-disabled {
+          opacity: 0.3;
+          pointer-events: none;
+        }
+        .flavour-card-hover {
+          transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .swiper-slide-active .flavour-card-hover {
+          transform: translateY(-8px);
+        }
+      `}</style>
+
       {/* ── Scalloped top edge ── */}
       <div className="w-full overflow-hidden" style={{ marginTop: "-1px" }}>
         <svg
@@ -120,7 +118,7 @@ export default function FlavoursSection() {
       </div>
 
       {/* ── Section body ── */}
-      <Container className="pt-10 pb-20 md:pt-20 md:pb-32 space-y-12 md:space-y-16">
+      <Container className="pt-10 pb-8 md:pt-20 md:pb-16 space-y-12 md:space-y-16">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:gap-10 px-4 md:px-0">
           <div className="max-w-3xl">
@@ -132,15 +130,6 @@ export default function FlavoursSection() {
               <br />
               Clean Hits.
             </Typography>
-            <h2
-              className="text-white uppercase leading-[0.9]"
-              style={{
-                fontSize: "clamp(42px, 11vw, 110px)",
-                fontWeight: 600,
-                // fontFamily: "Anton, Impact, sans-serif",
-                letterSpacing: "-2px",
-              }}
-            ></h2>
           </div>
           <div className="max-w-md md:pt-16">
             <p className="text-white/90 text-base md:text-[18px] leading-relaxed">
@@ -152,68 +141,89 @@ export default function FlavoursSection() {
         </div>
 
         {/* ── Carousel ── */}
-        <div className="relative mx-auto w-full">
-          <div className="overflow-hidden px-4 md:px-10">
-            <div
-              className="flex gap-4 md:gap-6 transition-transform duration-[420ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
-              style={{
-                transform: `translateX(calc(-${activeIndex} * (100% / ${VISIBLE} + ${isMobile ? "4px" : "8px"})))`,
-              }}
-            >
-              {FLAVOURS.map((card) => (
+        <div className="relative mb-0 mx-auto w-full px-0 md:px-12 group">
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={16}
+            slidesPerView={1.15}
+            centeredSlides={true}
+            grabCursor={true}
+            loop={false}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                centeredSlides: false,
+              },
+              768: {
+                slidesPerView: 2.5,
+                spaceBetween: 24,
+                centeredSlides: false,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 32,
+                centeredSlides: false,
+              },
+            }}
+            navigation={{
+              prevEl: ".swiper-button-prev-custom",
+              nextEl: ".swiper-button-next-custom",
+            }}
+            pagination={{
+              el: ".swiper-pagination-custom",
+              clickable: true,
+            }}
+            className="!pb-6 md:!pb-12"
+          >
+            {FLAVOURS.map((card) => (
+              <SwiperSlide key={card.id} className="h-auto pb-8 pt-4">
                 <div
-                  key={card.id}
-                  className="flex-shrink-0 rounded-3xl overflow-hidden flex flex-col shadow-lg"
+                  className="flavour-card-hover flex-shrink-0 rounded-[2rem] overflow-hidden flex flex-col shadow-xl"
                   style={{
-                    width: isMobile ? "100%" : `calc(100% / ${VISIBLE} - 16px)`,
                     backgroundColor: card.bgColor,
-                    minHeight: isMobile ? "460px" : "560px",
+                    height: "100%",
+                    minHeight: "480px",
                   }}
                 >
                   {/* Image */}
-                  <div className="flex-[2.5] flex items-center justify-center pb-2">
+                  <div className="">
                     <img
                       src={card.image}
                       alt={card.name}
-                      className="w-auto h-full object-contain scale-110 drop-shadow-2xl"
-                      style={{ maxHeight: isMobile ? "260px" : "580px" }}
+                      className="w-full object-cover drop-shadow-2xl"
                     />
                   </div>
 
                   {/* Text */}
-                  <div className="flex-1 px-6 py-6 md:py-8 flex flex-col justify-end space-y-1">
+                  <div className="flex-1 px-8 py-8 flex flex-col justify-end space-y-2">
                     <Typography
                       variant="lead2"
                       style={{
                         color: card.textColor,
                         fontWeight: 900,
+                        lineHeight: 1.1,
                       }}
                     >
                       {card.name}
                     </Typography>
                     <Typography
-                      variant="lead1"
-                      className="!mt-1"
-                      style={{ color: card.textColor }}
+                      variant="body"
+                      className="!mt-2"
+                      style={{ color: card.textColor, opacity: 0.9 }}
                     >
                       {card.ingredients}
                     </Typography>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
-          {/* ── Desktop arrows — on sides ── */}
+          {/* ── Left & Right Arrows (Desktop & Mobile) ── */}
           <button
-            onClick={() => go("prev")}
-            disabled={!canPrev}
             aria-label="Previous flavour"
-            className={`hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-white shadow-xl items-center justify-center transition-all duration-200 z-20 ${
-              canPrev
-                ? "opacity-100 hover:scale-110 cursor-pointer"
-                : "opacity-30 cursor-not-allowed"
-            }`}
+            className="swiper-button-prev-custom flex absolute left-1 md:-left-4 lg:-left-2 top-[45%] md:top-1/2 -translate-y-1/2 w-11 h-11 md:w-14 md:h-14 rounded-full bg-white shadow-xl items-center justify-center transition-all duration-300 z-20 active:scale-95 hover:scale-110 cursor-pointer text-black"
           >
             <svg
               width="24"
@@ -221,24 +231,17 @@ export default function FlavoursSection() {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              strokeWidth="3"
+              strokeWidth="2.5"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="text-black"
+              className="w-5 h-5 md:w-6 md:h-6"
             >
               <polyline points="15 18 9 12 15 6" />
             </svg>
           </button>
-
           <button
-            onClick={() => go("next")}
-            disabled={!canNext}
             aria-label="Next flavour"
-            className={`hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-white shadow-xl items-center justify-center transition-all duration-200 z-20 ${
-              canNext
-                ? "opacity-100 hover:scale-110 cursor-pointer"
-                : "opacity-30 cursor-not-allowed"
-            }`}
+            className="swiper-button-next-custom flex absolute right-1 md:-right-4 lg:-right-2 top-[45%] md:top-1/2 -translate-y-1/2 w-11 h-11 md:w-14 md:h-14 rounded-full bg-white shadow-xl items-center justify-center transition-all duration-300 z-20 active:scale-95 hover:scale-110 cursor-pointer text-black"
           >
             <svg
               width="24"
@@ -246,91 +249,27 @@ export default function FlavoursSection() {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              strokeWidth="3"
+              strokeWidth="2.5"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="text-black"
+              className="w-5 h-5 md:w-6 md:h-6"
             >
               <polyline points="9 18 15 12 9 6" />
             </svg>
           </button>
 
-          {/* ── Mobile arrows — below card centered ── */}
-          <div className="flex md:hidden justify-center gap-4 mt-6">
-            <button
-              onClick={() => go("prev")}
-              disabled={!canPrev}
-              aria-label="Previous flavour"
-              className={`w-11 h-11 rounded-full bg-white shadow-xl flex items-center justify-center transition-all duration-200 ${
-                canPrev
-                  ? "opacity-100 cursor-pointer"
-                  : "opacity-30 cursor-not-allowed"
-              }`}
-            >
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="text-black"
-              >
-                <polyline points="15 18 9 12 15 6" />
-              </svg>
-            </button>
-
-            {/* Dot indicators */}
-            <div className="flex items-center gap-2">
-              {FLAVOURS.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setActiveIndex(i)}
-                  className={`rounded-full transition-all duration-300 ${
-                    i === activeIndex
-                      ? "w-6 h-3 bg-white"
-                      : "w-3 h-3 bg-white/40"
-                  }`}
-                />
-              ))}
-            </div>
-
-            <button
-              onClick={() => go("next")}
-              disabled={!canNext}
-              aria-label="Next flavour"
-              className={`w-11 h-11 rounded-full bg-white shadow-xl flex items-center justify-center transition-all duration-200 ${
-                canNext
-                  ? "opacity-100 cursor-pointer"
-                  : "opacity-30 cursor-not-allowed"
-              }`}
-            >
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="text-black"
-              >
-                <polyline points="9 18 15 12 9 6" />
-              </svg>
-            </button>
+          {/* ── Pagination ── */}
+          <div className="flex justify-center items-center mt-6 z-20 relative">
+            <div className="swiper-pagination-custom flex items-center justify-center min-w-[80px]"></div>
           </div>
         </div>
 
         {/* ── Order Now CTA ── */}
-        <div className="flex justify-center pt-6">
+        <div className="flex justify-center">
           <FlowerButton
             label="Order Now"
             textColor="#E23375"
             bg="white"
-            className="mt-4 md:mt-12"
             onClick={() => alert("Stay thirsty… we’re coming soon.")}
           />
         </div>
