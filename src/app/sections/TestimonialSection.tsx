@@ -62,7 +62,7 @@ export default function TestimonialSection({ hideCard = false }: any) {
   return (
     <section
       className={`dotted-bg pt-20 pb-0 md:py-32 min-h-[650px] ${hideCard ? "bg-transparent" : "bg-white"}`}
-      id="testimonials"
+      id={hideCard ? undefined : "testimonials"}
     >
       {/* Heading */}
       {!hideCard && (
