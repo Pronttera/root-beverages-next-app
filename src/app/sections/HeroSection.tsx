@@ -146,7 +146,7 @@ const HeroSection = () => {
               </AnimatePresence>
 
               {/* Nav Buttons */}
-              <div className="flex items-center md:justify-start justify-center gap-6 mt-6">
+              <div className="flex items-center md:justify-start justify-center gap-6 mt-6 relative z-50">
                 <NavButton
                   onClick={() => paginate(-1)}
                   bg={slide.textColor === "white" ? "white" : "black"}
@@ -260,7 +260,7 @@ const HeroSection = () => {
             />
           </Container>
         </div>
-        <div className="mt-[-60rem]- md:mt-[-41rem]- absolute top-4 md:bottom-1/4">
+        <div className="mt-[-60rem]- md:mt-[-41rem]- absolute top-4 md:bottom-1/4 z-0 pointer-events-none">
           <TestimonialSection hideCard />
         </div>
       </motion.section>
