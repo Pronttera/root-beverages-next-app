@@ -33,7 +33,7 @@ const AboutSection = () => {
       title: "Supports Local\nCommunity",
       description:
         "We are committed to supporting local communities by generating employment opportunities",
-      image: "team.png",
+      image: "teams.png",
       backgroundColor: "#43A047", // green
       textColor: "white",
       position: "left",
