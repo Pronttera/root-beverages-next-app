@@ -32,9 +32,9 @@ const FAQ_DATA = [
   },
   {
     id: 3,
-    question: "How do I become a distributor or a partner?",
+    question: "Where can I buy Root Beverages?",
     answer:
-      "We are always looking to expand the Root Beverages family! If you are interested in becoming a distributor or a strategic partner, simply fill out the inquiry on our website and our dedicated team will promptly review your submission and reach out to discuss potential collaborations.",
+      "You’ll soon be able to shop directly on quick commerce and through selected retail store in your city.",
     activeBg: "#D32F2F", // Kokam
     inactiveBg: "#FBEF43",
     questionColor: "#FBEF43",
