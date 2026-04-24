@@ -26,40 +26,40 @@ interface FlavorCard {
 const FLAVOURS: FlavorCard[] = [
   {
     id: 3,
-    name: "Nagpur Orange",
-    ingredients: "Zesty orange burst with citrus fizz",
+    name: "Orange ka Zing in Every Sip",
+    ingredients: "Bold citrus burst with that iconic Indian sweetness.",
     bgColor: "#FF8F00",
     textColor: "#ffffff",
     image: "/flavours/orange.png",
   },
   {
     id: 1,
-    name: "Amritsari Jeera",
-    ingredients: "Spiced cumin blend with fizzy refreshment",
+    name: "Jeera Da Jalwa",
+    ingredients: "Bold, roasted jeera flavour with a punch of authentic Punjabi zing.",
     bgColor: "#5D4037",
     textColor: "#ffffff",
     image: "/flavours/jeera.png",
   },
   {
     id: 2,
-    name: "Konkani Kokam",
-    ingredients: "Tangy kokam with a coastal twist",
+    name: "Kokam Ka Cool Swag",
+    ingredients: "Beat the heat with this refreshing, tangy, and straight from the shores.",
     bgColor: "#D32F2F",
     textColor: "#ffffff",
     image: "/flavours/kokam.png",
   },
   {
     id: 5,
-    name: "IND Cola",
-    ingredients: "Classic cola with a desi touch",
+    name: "Classic Cola, Desi Soul",
+    ingredients: "India’s favourite drink now bottled with a desi twist.",
     bgColor: "#263238",
     textColor: "#ffffff",
     image: "/flavours/cola.png",
   },
   {
     id: 4,
-    name: "Allahabadi Guava",
-    ingredients: "Sweet guava with tropical notes",
+    name: "Amrood Ka Asli Swad",
+    ingredients: "Rich, aromatic guava from Allahabad, now with a refreshing fizzy twist.",
     bgColor: "#EC407A",
     textColor: "#ffffff",
     image: "/flavours/guava.png",
@@ -126,16 +126,17 @@ export default function FlavoursSection() {
               Our Sodas
             </span>
             <Typography variant="h2" className="!text-white">
-              Dirty Sodas.
+              Flavours from
               <br />
-              Clean Hits.
+              the Roots.
             </Typography>
           </div>
           <div className="max-w-md md:pt-16">
             <p className="text-white/90 text-base md:text-[18px] leading-relaxed">
-              Whether you're in the mood for something fruity, fizzy, or
-              fabulously refreshing, our collection of beverages and juices has
-              something for every taste.
+              A curated range of bold, fizzy beverages inspired by the desi
+              flavours we grew up loving. From nostalgic classics like jeera to
+              playful modern twists like cola, every bottle is crafted to feel
+              familiar yet refreshingly new.
             </p>
           </div>
         </div>
