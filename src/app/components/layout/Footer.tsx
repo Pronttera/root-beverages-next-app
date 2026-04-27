@@ -115,12 +115,10 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col items-start md:items-center gap-4 md:-mt-12">
-          <Image
+          <img
             src="/root-beverages-logo.png"
             alt="Root Beverages Logo"
-            width={200}
-            height={80}
-            className="object-contain"
+            className="h-25 md:h-20 w-auto object-contain"
           />
           <div className="text-right md:-mt-7">
             <p className="text-black font-black text-2xl rotate-[-5deg] inline-block">
