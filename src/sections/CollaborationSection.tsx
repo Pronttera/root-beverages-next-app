@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Phone, Mail, Globe, CheckCircle } from "lucide-react";
+import { Phone, Mail, Globe, CheckCircle, MapPin, Factory } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function CollaborationSection() {
@@ -92,20 +92,20 @@ export default function CollaborationSection() {
       link: "mailto:info@rootbeverages.in",
     },
     {
-      text: "rootbeverages.asia",
+      text: "rootbeverages.in",
       icon: <Globe size={20} />,
-      link: "https://rootbeverages.asia",
+      link: "https://rootbeverages.in",
     },
   ];
 
   return (
     <section
       id="lets-collaborate"
-      className="relative dotted-bg pt-8 md:pt-26 pb-20 px-6 md:px-16 lg:px-24"
+      className="relative bg-tomato md:bg-white dotted-bg pt-8 md:pt-26 pb-20 px-6 md:px-16 lg:px-24"
     >
-      <div className="absolute top-0 left-0 md:top-[10%] w-full h-[600px] bg-[#f9511d] z-0" />
+      <div className="md:absolute top-0 left-0 md:top-[10%] w-full md:h-[720px] bg-[#f9511d] z-0" />
 
-      <div className="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+      <div className="md:relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start">
         {/* LEFT */}
         <div className="text-white md:mt-5">
           <h2
@@ -137,18 +137,38 @@ export default function CollaborationSection() {
             ))}
           </div>
 
-          <div className="mt-6 text-lg text-white/80 leading-relaxed">
-            <strong className="text-white">Root Beverages Pvt Ltd</strong>
-            <br />
-            7 Temasek Blvd, #12–07 Suntec
-            <br />
-            Tower One, Australia, 038987
+          <div className="mt-8 space-y-6">
+            <div className="flex items-start gap-4 text-white/80 leading-relaxed">
+              <MapPin className="text-white mt-1 shrink-0" size={24} />
+              <div>
+                <strong className="text-white text-lg block mb-1">
+                  Office Address
+                </strong>
+                <p className="text-base">
+                  Nanak Society, RH-2, Sector 6, Kopar Khairane, Navi Mumbai,
+                  Maharashtra 400709
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4 text-white/80 leading-relaxed">
+              <Factory className="text-white mt-1 shrink-0" size={24} />
+              <div>
+                <strong className="text-white text-lg block mb-1">
+                  Factory Address
+                </strong>
+                <p className="text-base">
+                  Amruta automobiles, plot no. ATC-31, Covered Second Floor,
+                  TTC,INDL AREA, MIDC, Mahape, Navi Mumbai - 400710
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* FORM */}
         <div className="relative">
-          <div className="bg-white rounded-2xl shadow-2xl px-10 py-12 w-full max-w-xl ml-auto -mt-35 min-h-[800px] flex flex-col justify-between">
+          <div className="bg-white rounded-2xl shadow-2xl px-10 py-12 w-full max-w-xl ml-auto mt-10 md:-mt-35 min-h-[800px] flex flex-col justify-between">
             <div className="flex flex-col gap-3">
               {/* INPUTS */}
               {[
