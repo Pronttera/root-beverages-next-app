@@ -1,15 +1,14 @@
-import AppBar from "./components/layout/AppBar";
-import Footer from "./components/layout/Footer";
+import AppBar from "@/components/layout/AppBar";
+import Footer from "@/components/layout/Footer";
 
-import HeroSection from "./sections/HeroSection";
-import AboutSection from "./sections/AboutSection";
-// import TestimonialSection from "./sections/TestimonialSection";
-import CollaborationSection from "./sections/CollaborationSection";
-import FlavoursSection from "./sections/FlavoursSection";
-import TestimonialSection from "./sections/TestimonialSection";
-import SplashScreen from "./components/common/SplashScreen";
-import FAQSection from "./sections/FAQSection";
-import StorySection from "./sections/StorySection";
+import HeroSection from "@/sections/HeroSection";
+import AboutSection from "@/sections/AboutSection";
+import CollaborationSection from "@/sections/CollaborationSection";
+import FlavoursSection from "@/sections/FlavoursSection";
+import TestimonialSection from "@/sections/TestimonialSection";
+import SplashScreen from "@/components/common/SplashScreen";
+import FAQSection from "@/sections/FAQSection";
+import StorySection from "@/sections/StorySection";
 // TODO: Add Meta Here
 export default function Home() {
   return (
