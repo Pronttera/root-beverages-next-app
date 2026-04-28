@@ -157,7 +157,7 @@ export default function FlavoursSection() {
             loop={false}
             breakpoints={{
               640: {
-                slidesPerView: 2,
+                slidesPerView: 1.5,
                 spaceBetween: 20,
                 centeredSlides: false,
               },
@@ -183,44 +183,31 @@ export default function FlavoursSection() {
             className="!pb-6 md:!pb-12"
           >
             {FLAVOURS.map((card) => (
-              <SwiperSlide key={card.id} className="h-auto pb-8 pt-4">
-                <div
-                  className="flavour-card-hover flex-shrink-0 rounded-[2rem] overflow-hidden flex flex-col shadow-xl"
-                  style={{
-                    backgroundColor: card.bgColor,
-                    height: "100%",
-                    minHeight: "480px",
-                  }}
-                >
-                  {/* Image */}
-                  <div className="">
-                    <img
-                      src={card.image}
-                      alt={card.name}
-                      className="w-full object-cover drop-shadow-2xl"
-                    />
-                  </div>
+              <SwiperSlide
+                key={card.id}
+                className="h-auto !p-0 rounded-2xl block overflow-hidden"
+                style={{
+                  backgroundColor: card.bgColor,
+                }}
+              >
+                <img
+                  src={card.image}
+                  className="w-full h-[430px] md:h-[500px]  object-cover"
+                />
 
-                  {/* Text */}
-                  <div className="flex-1 px-8 py-8 flex flex-col justify-end space-y-2">
-                    <Typography
-                      variant="lead2"
-                      style={{
-                        color: card.textColor,
-                        fontWeight: 900,
-                        lineHeight: 1.1,
-                      }}
-                    >
-                      {card.name}
-                    </Typography>
-                    <Typography
-                      variant="body"
-                      className="!mt-2"
-                      style={{ color: card.textColor, opacity: 0.9 }}
-                    >
-                      {card.ingredients}
-                    </Typography>
-                  </div>
+                <div className="px-4 py-4">
+                  <Typography
+                    variant="body"
+                    className="!font-bold text-white text-xl !mb-4"
+                  >
+                    {card.name}
+                  </Typography>
+                  <Typography
+                    variant="body"
+                    className="text-sm md:text-base text-white font-[300] line-clamp-3"
+                  >
+                    {card.ingredients}
+                  </Typography>
                 </div>
               </SwiperSlide>
             ))}
