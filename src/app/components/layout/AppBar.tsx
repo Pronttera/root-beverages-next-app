@@ -113,9 +113,9 @@ const AppBar: React.FC<AppBarProps> = ({
               <img
                 src="/root-beverages-logo.png"
                 alt="Root Beverages"
-                className="h-8 md:h-22 w-auto object-contain"
+                className="h-18 md:h-22 w-auto object-contain"
               />
-              <p className="text-white text-base md:text-3xl font-bold">
+              <p className="text-white text-2xl md:text-3xl font-bold">
                 Root Beverages
               </p>
             </div>
