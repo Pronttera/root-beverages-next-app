@@ -66,16 +66,16 @@ export default function StorySection() {
             </Typography>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-12 max-w-4xl mx-auto">
-            {/* Akanksha */}
+            {/* Aakansha */}
             <div className="flex flex-col items-center group">
               <div className="relative overflow-hidden rounded-full w-56 h-56 md:w-64 md:h-64 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-[6px] border-white mb-6">
                 <img
                   src="/teams/akansha.PNG"
-                  alt="Akanksha - Head of Marketing"
+                  alt="Aakansha - Head of Marketing"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
-              <h4 className="font-bold text-3xl text-black">Akanksha</h4>
+              <h4 className="font-bold text-3xl text-black">Aakansha</h4>
               <p className="text-[#FF8F00] font-bold uppercase tracking-wider text-sm mt-2">
                 Chief Fizz Officer
               </p>
