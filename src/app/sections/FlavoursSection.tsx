@@ -27,7 +27,8 @@ const FLAVOURS: FlavorCard[] = [
   {
     id: 3,
     name: "Orange ka Zing in Every Sip",
-    ingredients: "Bold citrus burst with that iconic Indian sweetness.",
+    ingredients:
+      "Perfect for desi summers, a refreshing citrus burst with that iconic Indian sweetness.",
     bgColor: "#FF8F00",
     textColor: "#ffffff",
     image: "/flavours/orange.png",
@@ -35,7 +36,8 @@ const FLAVOURS: FlavorCard[] = [
   {
     id: 1,
     name: "Jeera Da Jalwa",
-    ingredients: "Bold, roasted jeera flavour with a punch of authentic Punjabi zing.",
+    ingredients:
+      "Iconic roasted jeera flavour with a punch of authentic Punjabi zing.",
     bgColor: "#5D4037",
     textColor: "#ffffff",
     image: "/flavours/jeera.png",
@@ -43,7 +45,8 @@ const FLAVOURS: FlavorCard[] = [
   {
     id: 2,
     name: "Kokam Ka Cool Swag",
-    ingredients: "Beat the heat with this refreshing, tangy, and straight from the shores.",
+    ingredients:
+      "Beat the heat with this cooling and tangy kokam, straight from the shores.",
     bgColor: "#D32F2F",
     textColor: "#ffffff",
     image: "/flavours/kokam.png",
@@ -51,7 +54,8 @@ const FLAVOURS: FlavorCard[] = [
   {
     id: 5,
     name: "Classic Cola, Desi Soul",
-    ingredients: "India’s favourite drink now bottled with a desi twist.",
+    ingredients:
+      "India’s favourite cola now bottled with a desi twist to beat the heat",
     bgColor: "#263238",
     textColor: "#ffffff",
     image: "/flavours/cola.png",
@@ -59,7 +63,8 @@ const FLAVOURS: FlavorCard[] = [
   {
     id: 4,
     name: "Amrood Ka Asli Swad",
-    ingredients: "Rich, aromatic guava from Allahabad, now with a refreshing fizzy twist.",
+    ingredients:
+      "Rich, aromatic guava from Allahabad, now with a refreshing fizzy twist.",
     bgColor: "#EC407A",
     textColor: "#ffffff",
     image: "/flavours/guava.png",

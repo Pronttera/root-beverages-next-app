@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
@@ -226,12 +225,10 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col items-center gap-3 pb-10">
-          <Image
+          <img
             src="/root-beverages-logo.png"
             alt="Root Beverages Logo"
-            width={160}
-            height={44}
-            className="object-contain"
+            className="h-25 md:h-20 w-auto object-contain"
           />
           <div className="text-center">
             <p className="text-black font-black text-xl rotate-[-5deg] inline-block">

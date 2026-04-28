@@ -77,7 +77,7 @@ export default function TestimonialSection({ hideCard = false }: any) {
           className="flex gap-10 items-center"
           animate={{ x: ["0%", "-50%"] }}
           transition={{
-            duration: 10,
+            duration: 20,
             repeat: Infinity,
             ease: "linear",
           }}
