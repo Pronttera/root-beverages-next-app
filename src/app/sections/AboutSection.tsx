@@ -13,7 +13,7 @@ const AboutSection = () => {
       title: "Made with\nRO Water",
       description:
         "Experience pure clarity and refreshing taste, crafted using RO-treated water to ensure high-quality standards",
-      image: "/about-images/1.png",
+      image: "/about-images/ro-water.PNG",
       backgroundColor: "#FF8F00", // orange
       textColor: "white",
       position: "left",
@@ -33,7 +33,7 @@ const AboutSection = () => {
       title: "Supports Local\nCommunity",
       description:
         "We are committed to supporting local communities by generating employment opportunities",
-      image: "teams.png",
+      image: "/about-images/local-community.PNG",
       backgroundColor: "#43A047", // green
       textColor: "white",
       position: "left",
@@ -43,7 +43,7 @@ const AboutSection = () => {
       title: "FSSAI Standard\nHygiene",
       description:
         "We follow strict multi-step quality control process. From ingredient selection to final packaging, every stage is monitored to ensure safety.",
-      image: "/about-images/1.png",
+      image: "/about-images/fssai-standards.PNG",
       backgroundColor: "#D32F2F", // red/kokam
       textColor: "white",
       position: "right",
