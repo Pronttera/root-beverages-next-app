@@ -110,6 +110,14 @@ export default function Footer() {
                 Facebook
               </a>
             </li>
+            <li className="hover:text-red-500 cursor-pointer">
+              <a
+                href="mailto:support@rootbeverages.in"
+                className="hover:text-red-500 break-all"
+              >
+                support@rootbeverages.in
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -218,6 +226,19 @@ export default function Footer() {
                   target="_facebook"
                 >
                   Facebook
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-black text-xl mb-3">Support</h3>
+            <ul className="space-y-2 text-gray-800 text-base">
+              <li className="hover:text-red-500 cursor-pointer">
+                <a
+                  href="mailto:support@rootbeverages.in"
+                  className="hover:text-red-500 break-all"
+                >
+                  support@rootbeverages.in
                 </a>
               </li>
             </ul>

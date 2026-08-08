@@ -1,6 +1,13 @@
 "use client";
 import React, { useState } from "react";
-import { Phone, Mail, Globe, CheckCircle, MapPin, Factory } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  Headset,
+  CheckCircle,
+  MapPin,
+  Factory,
+} from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function CollaborationSection() {
@@ -87,14 +94,14 @@ export default function CollaborationSection() {
       link: "tel:+919773555648",
     },
     {
-      text: "info@rootbeverages.in",
+      text: "info@rootbeverages.co.in",
       icon: <Mail size={20} />,
-      link: "mailto:info@rootbeverages.in",
+      link: "mailto:info@rootbeverages.co.in",
     },
     {
-      text: "rootbeverages.in",
-      icon: <Globe size={20} />,
-      link: "https://rootbeverages.in",
+      text: "support@rootbeverages.in",
+      icon: <Headset size={20} />,
+      link: "mailto:support@rootbeverages.in",
     },
   ];
 

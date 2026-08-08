@@ -260,6 +260,21 @@ export default function TermsOfService() {
             Beverages Co. rights with respect to such breach or any subsequent
             breaches.
           </Typography>
+
+          <Typography variant="title" className="font-black mt-8 mb-2">
+            Contact Us
+          </Typography>
+          <Typography variant="body">
+            For any questions, concerns, or grievances regarding these Terms of
+            Use or the Site, please reach out to us at{" "}
+            <a
+              href="mailto:support@rootbeverages.in"
+              className="text-[#f9511d] font-semibold hover:underline"
+            >
+              support@rootbeverages.in
+            </a>
+            .
+          </Typography>
         </div>
       </Section>
 

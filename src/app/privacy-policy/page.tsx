@@ -181,6 +181,21 @@ export default function PrivacyPolicy() {
             <li>Interaction data with affiliate services</li>
             <li>Search results and links including sponsored ads</li>
           </ul>
+
+          <Typography variant="title" className="font-black mt-8 mb-2">
+            Contact Us
+          </Typography>
+          <Typography variant="body" className="mb-4">
+            If you have any questions about this Privacy Notice, or wish to
+            access, correct, or delete your personal information, write to us at{" "}
+            <a
+              href="mailto:support@rootbeverages.in"
+              className="text-[#f9511d] font-semibold hover:underline"
+            >
+              support@rootbeverages.in
+            </a>{" "}
+            and we will get back to you.
+          </Typography>
         </div>
       </Section>
 
