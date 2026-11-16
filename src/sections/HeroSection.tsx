@@ -55,6 +55,33 @@ const SLIDES = [
     textColor: "white",
     bottle: "bottles/cola.png",
   },
+  {
+    id: 6,
+    image: "wrappers/mint-mojito-wrapper.jpeg",
+    tagline: "Cool. Minty. Refreshing.",
+    heading: "Mint Mojito\nchill redefined",
+    bg: "#558B2F",
+    textColor: "white",
+    bottle: "bottles/mint.png",
+  },
+  {
+    id: 7,
+    image: "wrappers/nimbu-jeera-wrapper.jpeg",
+    tagline: "Tangy. Spiced. Zesty.",
+    heading: "Nimbu Jeera\nwith a desi punch",
+    bg: "#F9A825",
+    textColor: "white",
+    bottle: "bottles/nimbu-jeera.png",
+  },
+  {
+    id: 8,
+    image: "wrappers/juicy-orange-wrapper.jpeg",
+    tagline: "Sweet. Citrus. Electric.",
+    heading: "Juicy Orange\nbursting with joy",
+    bg: "#EF6C00",
+    textColor: "white",
+    bottle: "bottles/orange.png",
+  },
 ];
 
 const variants = {
