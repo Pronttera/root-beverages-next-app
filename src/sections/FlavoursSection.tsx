@@ -21,17 +21,21 @@ interface FlavorCard {
   bgColor: string;
   textColor: string;
   image: string;
+  mrp: string;
+  offerPrice: string;
 }
 
 const FLAVOURS: FlavorCard[] = [
   {
     id: 3,
-    name: "Orange ka Zing in Every Sip",
+    name: "Orange ka Zing",
     ingredients:
-      "Perfect for desi summers, a refreshing citrus burst with that iconic Indian sweetness.",
+      "Refreshing citrus burst with iconic Indian sweetness for desi summers.",
     bgColor: "#FF8F00",
     textColor: "#ffffff",
     image: "/flavours/orange.png",
+    mrp: "₹12",
+    offerPrice: "₹10",
   },
   {
     id: 1,
@@ -41,33 +45,74 @@ const FLAVOURS: FlavorCard[] = [
     bgColor: "#5D4037",
     textColor: "#ffffff",
     image: "/flavours/jeera.png",
+    mrp: "₹12",
+    offerPrice: "₹10",
   },
   {
     id: 2,
     name: "Kokam Ka Cool Swag",
     ingredients:
-      "Beat the heat with this cooling and tangy kokam, straight from the shores.",
+      "Cooling and tangy coastal kokam to beat the scorching desi heat.",
     bgColor: "#D32F2F",
     textColor: "#ffffff",
     image: "/flavours/kokam.png",
+    mrp: "₹12",
+    offerPrice: "₹10",
   },
   {
     id: 5,
     name: "Classic Cola, Desi Soul",
     ingredients:
-      "India’s favourite cola now bottled with a desi twist to beat the heat",
+      "India’s favourite fizzy cola bottled with a bold, refreshing desi twist.",
     bgColor: "#263238",
     textColor: "#ffffff",
     image: "/flavours/cola.png",
+    mrp: "₹12",
+    offerPrice: "₹10",
   },
   {
     id: 4,
     name: "Amrood Ka Asli Swad",
     ingredients:
-      "Rich, aromatic guava from Allahabad, now with a refreshing fizzy twist.",
+      "Rich, aromatic Allahabad guava packed with a crisp, sparkling fizz.",
     bgColor: "#EC407A",
     textColor: "#ffffff",
     image: "/flavours/guava.png",
+    mrp: "₹12",
+    offerPrice: "₹10",
+  },
+  {
+    id: 6,
+    name: "Mint Mojito: Pudina Swag",
+    ingredients:
+      "Crisp garden mint and zesty lime infused with an icy, sparkling chill.",
+    bgColor: "#558B2F",
+    textColor: "#ffffff",
+    image: "/flavours/mint-mojito.jpg",
+    mrp: "₹12",
+    offerPrice: "₹10",
+  },
+  {
+    id: 7,
+    name: "Nimbu Jeera: Desi Dhamaka",
+    ingredients:
+      "Tangy lemon and roasted cumin for that iconic chatpata street kick.",
+    bgColor: "#F9A825",
+    textColor: "#ffffff",
+    image: "/flavours/nimbu-jeera.jpg",
+    mrp: "₹12",
+    offerPrice: "₹10",
+  },
+  {
+    id: 8,
+    name: "Juicy Orange: Santra Blast",
+    ingredients:
+      "Sun-ripened juicy oranges loaded with vibrant citrus sweetness and fizz.",
+    bgColor: "#EF6C00",
+    textColor: "#ffffff",
+    image: "/flavours/juicy-orange.jpg",
+    mrp: "₹12",
+    offerPrice: "₹10",
   },
 ];
 
@@ -185,29 +230,52 @@ export default function FlavoursSection() {
             {FLAVOURS.map((card) => (
               <SwiperSlide
                 key={card.id}
-                className="h-auto !p-0 rounded-2xl block overflow-hidden"
-                style={{
-                  backgroundColor: card.bgColor,
-                }}
+                className="!h-auto !p-0 rounded-2xl overflow-hidden shadow-xl"
               >
-                <img
-                  src={card.image}
-                  className="w-full h-[430px] md:h-[500px]  object-cover"
-                />
+                <div
+                  className="w-full h-[580px] md:h-[640px] flex flex-col justify-between rounded-2xl overflow-hidden"
+                  style={{
+                    backgroundColor: card.bgColor,
+                  }}
+                >
+                  {/* Fixed Image Section */}
+                  <div className="w-full h-[380px] md:h-[430px] flex-shrink-0 relative overflow-hidden bg-black/5">
+                    <img
+                      src={card.image}
+                      alt={card.name}
+                      className="w-full h-full object-cover object-center"
+                    />
+                  </div>
 
-                <div className="px-4 py-4">
-                  <Typography
-                    variant="body"
-                    className="!font-bold text-white text-xl !mb-4"
-                  >
-                    {card.name}
-                  </Typography>
-                  <Typography
-                    variant="body"
-                    className="text-sm md:text-base text-white font-[300] line-clamp-3"
-                  >
-                    {card.ingredients}
-                  </Typography>
+                  {/* Uniform Content Area */}
+                  <div className="p-4 md:p-5 flex flex-col justify-between flex-1">
+                    <div>
+                      <Typography
+                        variant="body"
+                        className="!font-bold text-white text-lg md:text-xl !mb-1.5 leading-snug line-clamp-1"
+                      >
+                        {card.name}
+                      </Typography>
+                      <p className="text-sm md:text-base text-white/90 font-light leading-relaxed line-clamp-2 min-h-[44px]">
+                        {card.ingredients}
+                      </p>
+                    </div>
+
+                    {/* Uniform Pinned Pricing Row */}
+                    <div className="pt-3 border-t border-white/20 flex items-center justify-between mt-auto">
+                      <div className="flex items-baseline gap-2">
+                        <span className="text-2xl md:text-3xl font-black text-white tracking-tight drop-shadow-sm">
+                          {card.offerPrice}
+                        </span>
+                        <span className="text-sm md:text-base text-white/70 line-through font-medium">
+                          MRP {card.mrp}
+                        </span>
+                      </div>
+                      <span className="bg-white text-black font-extrabold text-xs md:text-sm px-3 py-1 rounded-full shadow-md uppercase tracking-wider">
+                        Save ₹2
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </SwiperSlide>
             ))}
