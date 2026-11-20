@@ -13,7 +13,7 @@ const SLIDES = [
     id: 3,
     image: "wrappers/orange-wrapper.jpeg",
     tagline: "Zesty. Juicy. Classic.",
-    heading: "Nagpur Orange\nreimagined",
+    heading: "Nagpur Orange reimagined",
     bg: "#FF8F00",
     textColor: "white",
     bottle: "bottles/orange.png",
@@ -22,7 +22,7 @@ const SLIDES = [
     id: 1,
     image: "wrappers/jeera-wrapper.jpeg",
     tagline: "Bold. Spiced. Desi.",
-    heading: "Amritsari Jeera\nwith a punch",
+    heading: "Amritsari Jeera with a punch",
     bg: "#5D4037",
     textColor: "white",
     bottle: "bottles/jira.png",
@@ -31,17 +31,17 @@ const SLIDES = [
     id: 2,
     image: "wrappers/kokam-wrapper.jpeg",
     tagline: "Tangy. Coastal. Refreshing.",
-    heading: "Konkani Kokam\nin every sip",
+
+    heading: "Konkani Kokam in every sip",
     bg: "#D32F2F",
     textColor: "white",
     bottle: "bottles/kokam.png",
   },
-
   {
     id: 4,
     image: "wrappers/guoa-wrapper.jpeg",
     tagline: "Sweet. Tropical. Nostalgic.",
-    heading: "Guava\nlike never before",
+    heading: "Guava like never before",
     bg: "#EC407A",
     textColor: "white",
     bottle: "bottles/guava.png",
@@ -50,37 +50,10 @@ const SLIDES = [
     id: 5,
     image: "wrappers/cola-wrapper.jpeg",
     tagline: "Smooth. Classic. Timeless.",
-    heading: "IND Cola\nwith roots",
+    heading: "IND Cola with roots",
     bg: "#263238",
     textColor: "white",
     bottle: "bottles/cola.png",
-  },
-  {
-    id: 6,
-    image: "wrappers/mint-mojito-wrapper.jpeg",
-    tagline: "Cool. Minty. Refreshing.",
-    heading: "Mint Mojito\nchill redefined",
-    bg: "#558B2F",
-    textColor: "white",
-    bottle: "bottles/mint.png",
-  },
-  {
-    id: 7,
-    image: "wrappers/nimbu-jeera-wrapper.jpeg",
-    tagline: "Tangy. Spiced. Zesty.",
-    heading: "Nimbu Jeera\nwith a desi punch",
-    bg: "#F9A825",
-    textColor: "white",
-    bottle: "bottles/nimbu-jeera.png",
-  },
-  {
-    id: 8,
-    image: "wrappers/juicy-orange-wrapper.jpeg",
-    tagline: "Sweet. Citrus. Electric.",
-    heading: "Juicy Orange\nbursting with joy",
-    bg: "#EF6C00",
-    textColor: "white",
-    bottle: "bottles/orange.png",
   },
 ];
 
@@ -112,7 +85,7 @@ const HeroSection = () => {
     ]);
   };
 
-  const slide = SLIDES[activeIndex];
+  const slide = SLIDES[activeIndex % SLIDES.length] ?? SLIDES[0];
 
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
@@ -130,11 +103,11 @@ const HeroSection = () => {
         transition={{ duration: 0.5 }}
         id="hero"
       >
-        <div className="flex items-center mt-0 md:mt-14">
+        <div className="flex items-center mt-40 md:mt-14">
           {/* Background colour layer */}
           <div className="absolute inset-0 z-0" />
 
-          <div className="mt-[-9rem] md:mt-0 relative z-10 w-full max-w-[1900px] mx-auto px-8 md:px-16  flex flex-col-reverse md:flex-row-reverse md:items-center md:gap-12 py-12 md:py-0">
+          <div className="mt-0 md:mt-0 relative z-10 w-full max-w-[1900px] mx-auto px-8 md:px-16  flex flex-col-reverse md:flex-row-reverse md:items-center md:gap-12 py-12 md:py-0">
             {/* Text */}
             <div className="flex-1 md:flex flex-col-reverse justify-center md:justify-start md:flex-col gap-4 md:gap-6 mt-[-10rem]">
               <AnimatePresence mode="wait">
@@ -156,8 +129,6 @@ const HeroSection = () => {
                     variant="h1"
                     className="md:!text-6xl"
                     style={{
-                      //   fontWeight: 900,
-                      //   fontSize: "clamp(48px, 7vw, 100px)",
                       color: "black",
                       WebkitTextFillColor: slide.textColor,
                       WebkitTextStrokeWidth: "0.04em",
@@ -173,7 +144,7 @@ const HeroSection = () => {
               </AnimatePresence>
 
               {/* Nav Buttons */}
-              <div className="flex items-center md:justify-start justify-center gap-6 mt-6 relative z-50">
+              <div className="flex items-center md:justify-start justify-center gap-4 sm:gap-6 mt-6 relative z-50 flex-wrap sm:flex-nowrap">
                 <NavButton
                   onClick={() => paginate(-1)}
                   bg={slide.textColor === "white" ? "white" : "black"}
@@ -217,7 +188,7 @@ const HeroSection = () => {
 
             {/* Image — sprite strip */}
             <div
-              className="flex-1 flex items-center justify-center relative h-[600px] w-full overflow-hidden"
+              className="flex-1 flex items-center justify-center relative h-[600px] w-full overflow-hidden mt-20 md:mt-0"
               style={{
                 maskImage: "url(./masks/bottle-mask.png)",
                 maskPosition: "center",
@@ -228,6 +199,7 @@ const HeroSection = () => {
                 maskSize: "20rem",
                 backgroundSize: "20rem",
                 scale: isMobile ? 0.6 : 1.6,
+                transformOrigin: "center center",
                 transition: "1s",
               }}
             >
@@ -245,7 +217,6 @@ const HeroSection = () => {
                   <div
                     key={s.id}
                     className="h-full flex items-center justify-center flex-shrink-0"
-                    // style={{ width: `${100 / SLIDES.length}%` }}
                     style={{
                       width: 400,
                     }}

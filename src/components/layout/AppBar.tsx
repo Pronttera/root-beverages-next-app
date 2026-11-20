@@ -103,7 +103,7 @@ const AppBar: React.FC<AppBarProps> = ({
           zIndex: 55,
         }}
       >
-        <nav className="px-4 py-4 md:px-8">
+        <nav className="px-4 py-1 md:px-8">
           <div className="flex justify-between items-center max-w-7xl mx-auto cursor-pointer">
             {/* Brand Logo */}
             <div
@@ -113,7 +113,7 @@ const AppBar: React.FC<AppBarProps> = ({
               <img
                 src="/root-beverages-logo.png"
                 alt="Root Beverages"
-                className="h-18 md:h-22 w-auto object-contain"
+                className="h-24 md:h-28 w-auto object-contain"
               />
               <p className="text-white text-2xl md:text-3xl font-bold">
                 Root Beverages
