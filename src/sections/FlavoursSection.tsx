@@ -22,7 +22,8 @@ interface FlavorCard {
   textColor: string;
   image: string;
   mrp: string;
-  offerPrice: string;
+  offerPrice?: string;
+  savingsBadge?: string;
 }
 
 const FLAVOURS: FlavorCard[] = [
@@ -34,8 +35,7 @@ const FLAVOURS: FlavorCard[] = [
     bgColor: "#FF8F00",
     textColor: "#ffffff",
     image: "/flavours/orange.png",
-    mrp: "₹12",
-    offerPrice: "₹10",
+    mrp: "₹20",
   },
   {
     id: 1,
@@ -45,8 +45,7 @@ const FLAVOURS: FlavorCard[] = [
     bgColor: "#5D4037",
     textColor: "#ffffff",
     image: "/flavours/jeera.png",
-    mrp: "₹12",
-    offerPrice: "₹10",
+    mrp: "₹20",
   },
   {
     id: 2,
@@ -56,8 +55,7 @@ const FLAVOURS: FlavorCard[] = [
     bgColor: "#D32F2F",
     textColor: "#ffffff",
     image: "/flavours/kokam.png",
-    mrp: "₹12",
-    offerPrice: "₹10",
+    mrp: "₹20",
   },
   {
     id: 5,
@@ -67,8 +65,7 @@ const FLAVOURS: FlavorCard[] = [
     bgColor: "#263238",
     textColor: "#ffffff",
     image: "/flavours/cola.png",
-    mrp: "₹12",
-    offerPrice: "₹10",
+    mrp: "₹20",
   },
   {
     id: 4,
@@ -78,8 +75,7 @@ const FLAVOURS: FlavorCard[] = [
     bgColor: "#EC407A",
     textColor: "#ffffff",
     image: "/flavours/guava.png",
-    mrp: "₹12",
-    offerPrice: "₹10",
+    mrp: "₹20",
   },
   {
     id: 6,
@@ -91,6 +87,7 @@ const FLAVOURS: FlavorCard[] = [
     image: "/flavours/mint-mojito.jpg",
     mrp: "₹12",
     offerPrice: "₹10",
+    savingsBadge: "Save ₹2",
   },
   {
     id: 7,
@@ -102,6 +99,7 @@ const FLAVOURS: FlavorCard[] = [
     image: "/flavours/nimbu-jeera.jpg",
     mrp: "₹12",
     offerPrice: "₹10",
+    savingsBadge: "Save ₹2",
   },
   {
     id: 8,
@@ -113,6 +111,7 @@ const FLAVOURS: FlavorCard[] = [
     image: "/flavours/juicy-orange.jpg",
     mrp: "₹12",
     offerPrice: "₹10",
+    savingsBadge: "Save ₹2",
   },
 ];
 
@@ -264,16 +263,26 @@ export default function FlavoursSection() {
                     {/* Uniform Pinned Pricing Row */}
                     <div className="pt-3 border-t border-white/20 flex items-center justify-between mt-auto">
                       <div className="flex items-baseline gap-2">
-                        <span className="text-2xl md:text-3xl font-black text-white tracking-tight drop-shadow-sm">
-                          {card.offerPrice}
-                        </span>
-                        <span className="text-sm md:text-base text-white/70 line-through font-medium">
-                          MRP {card.mrp}
-                        </span>
+                        {card.offerPrice ? (
+                          <>
+                            <span className="text-2xl md:text-3xl font-black text-white tracking-tight drop-shadow-sm">
+                              {card.offerPrice}
+                            </span>
+                            <span className="text-sm md:text-base text-white/70 line-through font-medium">
+                              MRP {card.mrp}
+                            </span>
+                          </>
+                        ) : (
+                          <span className="text-2xl md:text-3xl font-black text-white tracking-tight drop-shadow-sm">
+                            MRP {card.mrp}
+                          </span>
+                        )}
                       </div>
-                      <span className="bg-white text-black font-extrabold text-xs md:text-sm px-3 py-1 rounded-full shadow-md uppercase tracking-wider">
-                        Save ₹2
-                      </span>
+                      {card.savingsBadge && (
+                        <span className="bg-white text-black font-extrabold text-xs md:text-sm px-3 py-1 rounded-full shadow-md uppercase tracking-wider">
+                          {card.savingsBadge}
+                        </span>
+                      )}
                     </div>
                   </div>
                 </div>
